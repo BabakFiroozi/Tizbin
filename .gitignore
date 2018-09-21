@@ -1,0 +1,7 @@
+Library/
+obj/
+Temp/
+.vs/
+Tizbin.userprefs
+*.apk
+*.rar

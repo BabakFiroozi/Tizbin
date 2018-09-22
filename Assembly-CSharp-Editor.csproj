@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{35D54A4B-7688-3054-8AD9-86769C84E87A}</ProjectGuid>
+    <ProjectGuid>{DA2F52C0-3FBC-19D8-80E8-CB7A7A21D51B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -56,16 +56,16 @@
      <Compile Include="Assets\Editor\StageGenerator.cs" />
      <Compile Include="Assets\JSON\Editor\JSONChecker.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>H:/MyJobProjects/Tizbin/Tizbin/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>H:/MyJobProjects/Tizbin/Tizbin_unity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>H:/MyJobProjects/Tizbin/Tizbin/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>H:/MyJobProjects/Tizbin/Tizbin_unity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>H:/MyJobProjects/Tizbin/Tizbin/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>H:/MyJobProjects/Tizbin/Tizbin_unity/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>H:/MyJobProjects/Tizbin/Tizbin/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>H:/MyJobProjects/Tizbin/Tizbin_unity/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity2018.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -311,25 +311,25 @@
  <HintPath>C:/Program Files/Unity2018.2.1f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>H:/MyJobProjects/Tizbin/Tizbin/Assets/DOTween/DOTween.dll</HintPath>
+ <HintPath>H:/MyJobProjects/Tizbin/Tizbin_unity/Assets/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTween43">
- <HintPath>H:/MyJobProjects/Tizbin/Tizbin/Assets/DOTween/DOTween43.dll</HintPath>
+ <HintPath>H:/MyJobProjects/Tizbin/Tizbin_unity/Assets/DOTween/DOTween43.dll</HintPath>
  </Reference>
  <Reference Include="DOTween46">
- <HintPath>H:/MyJobProjects/Tizbin/Tizbin/Assets/DOTween/DOTween46.dll</HintPath>
+ <HintPath>H:/MyJobProjects/Tizbin/Tizbin_unity/Assets/DOTween/DOTween46.dll</HintPath>
  </Reference>
  <Reference Include="DOTween50">
- <HintPath>H:/MyJobProjects/Tizbin/Tizbin/Assets/DOTween/DOTween50.dll</HintPath>
+ <HintPath>H:/MyJobProjects/Tizbin/Tizbin_unity/Assets/DOTween/DOTween50.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenEditor">
- <HintPath>H:/MyJobProjects/Tizbin/Tizbin/Assets/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ <HintPath>H:/MyJobProjects/Tizbin/Tizbin_unity/Assets/DOTween/Editor/DOTweenEditor.dll</HintPath>
  </Reference>
  <Reference Include="NBidi">
- <HintPath>H:/MyJobProjects/Tizbin/Tizbin/Assets/FarsiSaz/NBidi.dll</HintPath>
+ <HintPath>H:/MyJobProjects/Tizbin/Tizbin_unity/Assets/FarsiSaz/NBidi.dll</HintPath>
  </Reference>
  <Reference Include="SimpleJSON">
- <HintPath>H:/MyJobProjects/Tizbin/Tizbin/Assets/FarsiSaz/SimpleJSON.dll</HintPath>
+ <HintPath>H:/MyJobProjects/Tizbin/Tizbin_unity/Assets/FarsiSaz/SimpleJSON.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Users/Babak/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -376,7 +376,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{7AF5B049-C681-7B21-F458-2F37BC08689B}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{4A236824-FEF0-BC3A-D995-A7421CD3D448}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -23,6 +23,8 @@ public class MemoryBoard : MonoBehaviour {
 	[SerializeField] Button _hintButton = null;
 	[SerializeField] Button _helpButton = null;
 	[SerializeField] Button _backButton = null;
+	[SerializeField] Button _replyButton = null;
+
 
 	[SerializeField] Text _gameModeText = null;
 
@@ -118,6 +120,9 @@ public class MemoryBoard : MonoBehaviour {
 		});
 		_backButton.onClick.AddListener (() => {
 			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_STAGE_MENU);
+		});
+		_replyButton.onClick.AddListener (() => {
+			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_GAME);
 		});
 
 		UpdateUiTexts ();

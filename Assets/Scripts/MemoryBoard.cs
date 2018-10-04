@@ -125,6 +125,7 @@ public class MemoryBoard : MonoBehaviour {
 			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_GAME);
 		});
 
+
 		UpdateUiTexts ();
 	}
 
@@ -156,6 +157,9 @@ public class MemoryBoard : MonoBehaviour {
 
 		_timerBar.transform.parent.gameObject.SetActive (false);
 
+		_helpButton.interactable = true;
+		_hintButton.interactable = false;
+
 		_playDuration = 0;
 	}
 
@@ -169,7 +173,7 @@ public class MemoryBoard : MonoBehaviour {
 
 		_hintCount++;
 
-		GamePlayerPrefs.Instance.SetHint (GamePlayerPrefs.Instance.GetHint() - 1);
+		//GamePlayerPrefs.Instance.SetHint (GamePlayerPrefs.Instance.GetHint() - 1);
 
 		UpdateUiTexts ();
 
@@ -205,7 +209,7 @@ public class MemoryBoard : MonoBehaviour {
 
 		_helpCount++;
 
-		GamePlayerPrefs.Instance.SetHelp (GamePlayerPrefs.Instance.GetHelp() - 1);
+		//GamePlayerPrefs.Instance.SetHelp (GamePlayerPrefs.Instance.GetHelp() - 1);
 
 		UpdateUiTexts ();
 		
@@ -273,9 +277,13 @@ public class MemoryBoard : MonoBehaviour {
 			cellObj.transform.Find ("pic").gameObject.SetActive (true);
 			_firstCellObj = cellObj;
 			_lastCellNumber = cellNum;
+			_helpButton.interactable = false;
+			_hintButton.interactable = true;
 		}
 		else
 		{
+			_helpButton.interactable = true;
+			_hintButton.interactable = false;
 			if(cellNum == _lastCellNumber)
 			{
 				cellObj.transform.Find ("pic").gameObject.SetActive (true);
@@ -330,7 +338,7 @@ public class MemoryBoard : MonoBehaviour {
 		GamePlayerPrefs.Instance.SetPlayTime (DataCarrier.Instance.GameMode, DataCarrier.Instance.SelectedStage, (int)_playDuration);
 		GamePlayerPrefs.Instance.SetPlayRecord (DataCarrier.Instance.GameMode, DataCarrier.Instance.SelectedStage, _wrongCount);
 
-		GamePlayerPrefs.Instance.UnlockStage (GameModes.VeryEasy, DataCarrier.Instance.SelectedStage + 1);
+		GamePlayerPrefs.Instance.UnlockStage ( DataCarrier.Instance.GameMode, DataCarrier.Instance.SelectedStage + 1);
 
 		_succeedPage.SetActive (true);
 		_gameFinished = true;

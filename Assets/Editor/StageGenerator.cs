@@ -29,7 +29,7 @@ public class StageGenerator : EditorWindow {
 	#endregion
 
 
-	GameModes _saveGameMode = GameModes.VeryEasy;
+	GameModes _saveGameMode = GameModes.Easy;
 	int _stagesCount = 50;
 	int _maxSpritesCount = 20;
 	float _glimpTime = 3;

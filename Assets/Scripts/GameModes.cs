@@ -4,6 +4,5 @@ public enum GameModes
 {
 	Easy = 12,
 	Normal = 16,
-	Hard = 20,
-	VeryHard = 24
+	Hard = 20
 }

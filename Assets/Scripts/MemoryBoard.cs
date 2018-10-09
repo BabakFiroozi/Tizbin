@@ -34,7 +34,7 @@ public class MemoryBoard : MonoBehaviour {
 
 	float _glimpTime = 5;
 
-	float _summonDuration = 1;
+	[SerializeField] float _summonDuration = 1.0f;
 
 	int _lastCellNumber = -1;
 	GameObject _lastCellObj = null;
@@ -83,6 +83,11 @@ public class MemoryBoard : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		if (DataCarrier.Instance.GameMode == GameModes.Normal)
+			_summonDuration *= 2;
+		if (DataCarrier.Instance.GameMode == GameModes.Hard)
+			_summonDuration *= 3;
+
 		_gameModeText.text = (DataCarrier.Instance.SelectedStage + 1) + " " + DataCarrier.Instance.GetString (DataCarrier.Instance.GameMode.ToString ());
 		
 		var textAsset = Resources.Load<TextAsset> ("Levels/" + DataCarrier.Instance.GameMode.ToString ());
@@ -122,7 +127,7 @@ public class MemoryBoard : MonoBehaviour {
 			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_STAGE_MENU);
 		});
 		_replyButton.onClick.AddListener (() => {
-			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_GAME);
+			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_GAME_MEMORY);
 		});
 
 

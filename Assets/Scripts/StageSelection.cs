@@ -54,7 +54,7 @@ public class StageSelection : MonoBehaviour
 	void StageButtonClick(int index)
 	{
 		DataCarrier.Instance.SelectedStage = index;
-		UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_GAME);
+		UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_GAME_MEMORY);
 	}
 }
 

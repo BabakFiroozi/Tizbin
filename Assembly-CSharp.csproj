@@ -182,10 +182,12 @@
      <Compile Include="Assets\Scripts\Common\DataCarrier.cs" />
      <Compile Include="Assets\Scripts\Common\GamePlayerPrefs.cs" />
      <Compile Include="Assets\Scripts\Common\LayerMaskUtil.cs" />
+     <Compile Include="Assets\Scripts\FailPage.cs" />
      <Compile Include="Assets\Scripts\GameModes.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MemoryBoard.cs" />
      <Compile Include="Assets\Scripts\PlayFabLogin.cs" />
+     <Compile Include="Assets\Scripts\SightBoard.cs" />
      <Compile Include="Assets\Scripts\SplashScene.cs" />
      <Compile Include="Assets\Scripts\StageSelection.cs" />
      <Compile Include="Assets\Scripts\StoreNames.cs" />

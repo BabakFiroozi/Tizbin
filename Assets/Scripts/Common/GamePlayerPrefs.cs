@@ -28,6 +28,19 @@ public class GamePlayerPrefs
 		PlayerPrefs.Save ();
 	}
 
+	public void DoneTutorialSight()
+	{
+		string key = "Tutorial_Done_sight";
+		PlayerPrefs.SetInt (key, 1);
+	}
+
+	public bool IsTutorialDoneSight()
+	{
+		string key = "Tutorial_Done_sight";
+		int rec = PlayerPrefs.GetInt (key, 0);
+		return rec == 1;
+	}
+
 	public void SetPlayRecord(GameModes mode, int stage, int rec)
 	{
 		string key = mode.ToString () + stage.ToString () + "record";

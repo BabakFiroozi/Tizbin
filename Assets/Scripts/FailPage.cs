@@ -17,8 +17,8 @@ public class FailPage : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		if (SightBoard.Instance.PassedCount > 0)
-			_countText.text = SightBoard.Instance.PassedCount.ToString ();
+		if (SightBoard.Instance.SucceedCount > 0)
+			_countText.text = SightBoard.Instance.SucceedCount.ToString ();
 		else
 		{
 			_countText.text = "";

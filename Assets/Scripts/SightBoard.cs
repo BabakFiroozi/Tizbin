@@ -12,10 +12,10 @@ public class SightBoard : MonoBehaviour
 		get{return _instance;}
 	}
 
-	int _passedCount = 0;
-	public int PassedCount
+	int _succeedCount = 0;
+	public int SucceedCount
 	{
-		get{return _passedCount;}
+		get{return _succeedCount;}
 	}
 
 	int _helpsCount = 0;
@@ -42,18 +42,23 @@ public class SightBoard : MonoBehaviour
 
 	[SerializeField] GameObject[] _albumeObjects = null;
 
+	[SerializeField] GameObject _tutorialPageObj = null;
+
 	RectTransform _topAlbume = null;
 	RectTransform _bottAlbume = null;
 
 	List<GameObject> _commonPics = new List<GameObject>();
 
-	[SerializeField] Text _succeedText = null;
+	[SerializeField] Image _succeedSign = null;
 
 	[SerializeField] GameObject _failPanelObj = null;
+	[SerializeField] GameObject _failedAlert = null;
 
 	[SerializeField] float[] _hitDuratinaArr = null;
-	float _hitDuratin = 5;
+	float _hitDuratin = 0;
 	float _hitTimer = 0;
+
+	bool _firstShowTutorialPage = false;
 
 	IEnumerator ShowHint()
 	{
@@ -120,6 +125,7 @@ public class SightBoard : MonoBehaviour
 	{
 		_instance = this;
 
+		_tutorialFinished = GamePlayerPrefs.Instance.IsTutorialDoneSight ();
 	}
 
 	// Use this for initialization
@@ -128,11 +134,11 @@ public class SightBoard : MonoBehaviour
 		if (DataCarrier.Instance.GameMode == GameModes.Normal)
 			_gameMode = 1;
 		if (DataCarrier.Instance.GameMode == GameModes.Hard)
-			_gameMode = 2;
+			_gameMode = 2;	
 
 		_hitDuratin = _hitDuratinaArr [_gameMode];
 		
-		_succeedText.DOFade (0, 0);
+		_succeedSign.DOFade (0, 0);
 
 		_hintButton.onClick.AddListener (() => {
 			_hintRoutine = StartCoroutine (ShowHint ());
@@ -149,8 +155,46 @@ public class SightBoard : MonoBehaviour
 			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_MAIN_MENU);
 		});
 
-
 		GenerateAlbume ();
+	}
+
+	int _tutorialCounter = 0;
+	bool _tutorialFinished = false;
+
+	List<GameObject> _guideCirclesist = new List<GameObject> ();
+
+	void ShowGuidCircles(bool isTut)
+	{
+		if (isTut)
+		{
+			_tutorialCounter++;
+			if (_tutorialCounter > 3)
+			{
+				_tutorialFinished = true;
+				return;
+			}
+		}
+
+		foreach (var obj in _guideCirclesist)
+			Destroy (obj);
+		_guideCirclesist.Clear ();
+
+		var circleObj = transform.Find ("circle").gameObject;
+		circleObj.GetComponent<RectTransform> ().sizeDelta = new Vector2 (_commonPics [0].GetComponent<RectTransform> ().rect.width, _commonPics [0].GetComponent<RectTransform> ().rect.height);
+		foreach (var obj in _commonPics)
+		{
+			var circle = Instantiate (circleObj, obj.transform.position, circleObj.transform.rotation, obj.transform);
+			var rectTr = circle.GetComponent<RectTransform> ();
+			rectTr.Rotate (0, 0, Rand (1, 360));
+			circle.GetComponent<Image> ().color = isTut ? Color.green : Color.black;
+			rectTr.gameObject.SetActive (true);
+			var seq = DOTween.Sequence ();
+			seq.Append (rectTr.DOScale (1.1f, .2f));
+			seq.Append (rectTr.DOScale (1.0f, .2f));
+			seq.SetLoops (isTut ? -1 : 3);
+			_guideCirclesist.Add (circle);
+		}
+
 	}
 
 	int _gameMode = 0;
@@ -185,11 +229,13 @@ public class SightBoard : MonoBehaviour
 		obj.GetComponent<Image> ().sprite = _allSprites [randomIndex];
 		obj.GetComponent<Button> ().onClick.AddListener (() => ButtonClick (obj));
 		_commonPics.Add (obj);
+		obj.transform.SetSiblingIndex (_topAlbume.childCount - 1);
 
 		obj = _bottAlbume.GetChild (Rand (0, _bottAlbume.childCount)).gameObject;
 		obj.GetComponent<Image> ().sprite = _allSprites [randomIndex];
 		obj.GetComponent<Button> ().onClick.AddListener (() => ButtonClick (obj));
 		_commonPics.Add (obj);
+		obj.transform.SetSiblingIndex (_bottAlbume.childCount - 1);
 
 		foreach(var o in _topAlbume)
 		{
@@ -242,8 +288,25 @@ public class SightBoard : MonoBehaviour
 
 		yield return new WaitForSeconds (animTime);
 
+
 		_hitTimer = _hitDuratin;
 		_perventTouch.SetActive (false);
+
+		_hitDuratin -= .5f;
+		if (_hitDuratin < _hitDuratinaArr [_gameMode] / 3)
+			_hitDuratin = _hitDuratinaArr [_gameMode] / 3;
+
+		if (!_tutorialFinished)
+			ShowGuidCircles (true);
+
+		if(!_tutorialFinished && !_firstShowTutorialPage)
+		{
+			_firstShowTutorialPage = true;
+			_tutorialPageObj.SetActive (true);
+			_tutorialPageObj.transform.Find ("Backg/button").GetComponent<Button> ().onClick.AddListener (() => {
+				_tutorialPageObj.SetActive(false);
+			});
+		}
 	}
 
 	int Rand(int min, int max)
@@ -254,6 +317,14 @@ public class SightBoard : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		CheckTime ();
+	}
+
+	void CheckTime()
+	{
+		if (!_tutorialFinished)
+			return;
+		
 		if(_hitTimer != 0)
 		{
 			float coef = _hitTimer / _hitDuratin;
@@ -262,7 +333,7 @@ public class SightBoard : MonoBehaviour
 			if(_hitTimer <= 0)
 			{
 				_timerBar.fillAmount = 0;
-				FinishGame (false);
+				FinishGame (2);
 				return;
 			}
 		}
@@ -270,33 +341,48 @@ public class SightBoard : MonoBehaviour
 
 	void ButtonClick(GameObject obj)
 	{
-		FinishGame (_commonPics.Contains (obj));
+		if(_tutorialFinished == false)
+		{
+			if (_commonPics.Contains (obj))
+				FinishGame (0);
+			return;
+		}
+
+		FinishGame (_commonPics.Contains (obj) ? 0 : 1);
 	}
 
-	void FinishGame(bool succeed)
+	/// <summary>
+	/// cond == 0 is succeed, 1 is wrong select, 2 is time out
+	/// </summary>
+	/// <param name="cond">Cond.</param>
+	void FinishGame(int cond)
 	{
 		_hitTimer = 0;
 
-		if(succeed)
+		if(cond == 0)
 		{
 			_perventTouch.SetActive (true);
 			if (_hintRoutine != null)
 				StopCoroutine (_hintRoutine);
 			_hintButton.interactable = true;
 			StartCoroutine (GoNextGeneration ());
-			_passedCount++;
+			if (_tutorialFinished)
+				_succeedCount++;
+
+			if (_tutorialFinished)
+				GamePlayerPrefs.Instance.DoneTutorialSight ();
 		}
 		else
 		{
 			_perventTouch.SetActive (true);
-			StartCoroutine (ShowFailedPanel ());
+			StartCoroutine (ShowFailedPanel (cond == 2));
 		}
 	}
 
 	IEnumerator GoNextGeneration()
 	{
-		_succeedText.DOFade (1, .5f);
-		_succeedText.DOFade (0, .5f).SetDelay(.5f);
+		_succeedSign.DOFade (1, .5f);
+		_succeedSign.DOFade (0, .5f).SetDelay(.5f);
 
 		float animTime = .5f;
 		_topAlbume.DOAnchorPosX (700, animTime);
@@ -310,24 +396,19 @@ public class SightBoard : MonoBehaviour
 		GenerateAlbume ();
 	}
 
-	IEnumerator ShowFailedPanel()
+	IEnumerator ShowFailedPanel(bool timeOut)
 	{
-		var circleObj = transform.Find ("circle").gameObject;
-		circleObj.GetComponent<RectTransform> ().sizeDelta = new Vector2 (_commonPics [0].GetComponent<RectTransform> ().rect.width, _commonPics [0].GetComponent<RectTransform> ().rect.height);
+		ShowGuidCircles (false);
 
-		foreach (var obj in _commonPics)
-		{
-			var circle = Instantiate (circleObj, obj.transform.position, obj.transform.rotation, circleObj.transform.parent);
-			var rectTr = circle.GetComponent<RectTransform> ();
-			rectTr.gameObject.SetActive (true);
-			var seq = DOTween.Sequence ();
-			seq.Append (rectTr.DOScale (1.1f, .2f));
-			seq.Append (rectTr.DOScale (1.0f, .2f));
-			seq.SetLoops (3);
-		}
+		yield return new WaitForSeconds (.75f);
 
-		yield return new WaitForSeconds (2);
+		_failedAlert.SetActive (true);
+		_failedAlert.transform.Find ("timeOut").gameObject.SetActive (timeOut);
+		_failedAlert.transform.Find ("wrongSelect").gameObject.SetActive (!timeOut);
 
+		yield return new WaitForSeconds (1.25f);
+
+		_failedAlert.SetActive (false);
 		_failPanelObj.SetActive (true);
 		_perventTouch.SetActive (false);
 	}

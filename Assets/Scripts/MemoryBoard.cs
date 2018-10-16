@@ -324,12 +324,12 @@ public class MemoryBoard : MonoBehaviour {
 				Destroy (tickObj.gameObject);
 				_tutorialCounter++;
 
-				if (_tutorialCounter == 2)
+				if (_tutorialCounter == 2 || _tutorialCounter == 4)
 				{
 					_tutorialCellObjsList.Clear ();
-					ShowPairedCellsForTutorial (1);
+					ShowPairedCellsForTutorial (_tutorialCounter / 2);
 				}
-				if (_tutorialCounter == 4)
+				if (_tutorialCounter == 6)
 				{
 					_tutorialFinished = true;
 					GamePlayerPrefs.Instance.DoneTutorialMemory ();	

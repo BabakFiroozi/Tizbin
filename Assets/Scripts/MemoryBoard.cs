@@ -12,8 +12,8 @@ public class MemoryBoard : MonoBehaviour {
 		get{return _instance;}
 	}
 
-	[SerializeField] Image _rightSel = null;
-	[SerializeField] Image _wrongSel = null;
+	[SerializeField] Image _rightSelectedSign = null;
+	[SerializeField] Image _wrongSelectedSign = null;
 
 	[SerializeField] Sprite[] _allSprites = null;
 
@@ -91,8 +91,8 @@ public class MemoryBoard : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		_wrongSel.DOFade (0, 0);
-		_rightSel.DOFade (0, 0);
+		_wrongSelectedSign.DOFade (0, 0);
+		_rightSelectedSign.DOFade (0, 0);
 
 		_tutorialFinished = GamePlayerPrefs.Instance.IsTutorialDoneMemory ();
 
@@ -204,6 +204,10 @@ public class MemoryBoard : MonoBehaviour {
 			_tutorialPageObj.transform.Find ("Backg/button/text2").gameObject.SetActive (true);
 
 		}
+
+		_rightSelectedSign.GetComponent<RectTransform> ().anchoredPosition = _gridContent.GetComponent<RectTransform> ().anchoredPosition +
+		new Vector2 (0, _gridContent.GetComponent<RectTransform> ().sizeDelta.y / 2 + _rightSelectedSign.GetComponent<RectTransform> ().sizeDelta.y / 2);
+		_wrongSelectedSign.GetComponent<RectTransform> ().anchoredPosition = _rightSelectedSign.GetComponent<RectTransform> ().anchoredPosition;
 	}
 
 	List<GameObject> _tutorialCellObjsList = new List<GameObject>();
@@ -393,9 +397,9 @@ public class MemoryBoard : MonoBehaviour {
 
 				if(isTutorialFinished)
 				{
-					_rightSel.DOKill ();
-					_rightSel.DOFade (1, 0);
-					_rightSel.DOFade (0, .3f).SetDelay (.6f);
+					_rightSelectedSign.DOKill ();
+					_rightSelectedSign.DOFade (1, 0);
+					_rightSelectedSign.DOFade (0, .3f).SetDelay (.6f);
 				}
 
 				if (_tutorialCounter == 6)
@@ -411,9 +415,9 @@ public class MemoryBoard : MonoBehaviour {
 				_lastCellObj = cellObj;
 				StartCoroutine (HideWrongCells ());
 				_wrongCount++;
-				_wrongSel.DOKill ();
-				_wrongSel.DOFade (1, 0);
-				_wrongSel.DOFade (0, .3f).SetDelay (.4f);
+				_wrongSelectedSign.DOKill ();
+				_wrongSelectedSign.DOFade (1, 0);
+				_wrongSelectedSign.DOFade (0, .3f).SetDelay (.4f);
 				//wrog sound
 				//hide sound with delay
 			}

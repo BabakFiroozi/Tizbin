@@ -243,8 +243,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: H:/MyJobProjects/MatchLetters/res/sign rapidgame3/rapidgame3/rapidgame3.keystore
+  AndroidKeyaliasName: rapidgame3
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1
   AndroidIsGame: 1

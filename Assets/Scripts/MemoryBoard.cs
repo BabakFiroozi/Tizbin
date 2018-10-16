@@ -32,6 +32,11 @@ public class MemoryBoard : MonoBehaviour {
 
 	[SerializeField] GameObject _preventTouchObj = null;
 
+	[SerializeField] GameObject _tutorialPageObj = null;
+	int _tutorialCounter = 0;
+	bool _tutorialFinished = false;
+	bool _firstShowTutorialPage = false;
+
 	float _glimpTime = 5;
 
 	[SerializeField] float _summonDuration = 1.0f;
@@ -83,6 +88,8 @@ public class MemoryBoard : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		_tutorialFinished = GamePlayerPrefs.Instance.IsTutorialDoneMemory ();
+
 		if (DataCarrier.Instance.GameMode == GameModes.Normal)
 			_summonDuration *= 2;
 		if (DataCarrier.Instance.GameMode == GameModes.Hard)
@@ -107,7 +114,8 @@ public class MemoryBoard : MonoBehaviour {
 		{
 			int cellIndex = (int)cellsList[i].i;
 			var cellObj = _gridContent.GetChild (cellIndex).gameObject;
-			cellObj.transform.Find ("pic").GetComponent<Image> ().sprite = _allSprites [(int)spritesList [iter].i];
+			int spriteIndex = (int)spritesList [iter].i;
+			cellObj.transform.Find ("pic").GetComponent<Image> ().sprite = _allSprites [spriteIndex];
 
 			cellObj.GetComponent<Button>().onClick.AddListener(()=>CellClick(cellObj));
 			_cellsNumsDic.Add(cellObj, iter);
@@ -115,7 +123,18 @@ public class MemoryBoard : MonoBehaviour {
 			iter += i % 2;
 		}
 
-		StartCoroutine (ShowFirstGlimp ());
+		if(!_tutorialFinished && !_firstShowTutorialPage)
+		{
+			_firstShowTutorialPage = true;
+			_tutorialPageObj.SetActive (true);
+			_tutorialPageObj.transform.Find ("Backg/button").GetComponent<Button> ().onClick.AddListener (() => {
+				_tutorialPageObj.SetActive(false);
+				StartCoroutine (ShowFirstGlimp ());
+			});
+		}
+
+		if (_tutorialFinished)
+			StartCoroutine (ShowFirstGlimp ());
 
 		_hintButton.onClick.AddListener (() => {
 			ShowHintCells();
@@ -129,7 +148,6 @@ public class MemoryBoard : MonoBehaviour {
 		_replyButton.onClick.AddListener (() => {
 			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_GAME_MEMORY);
 		});
-
 
 		UpdateUiTexts ();
 	}
@@ -166,7 +184,34 @@ public class MemoryBoard : MonoBehaviour {
 		_hintButton.interactable = false;
 
 		_playDuration = 0;
+
+
+		if(!_tutorialFinished)
+		{
+			ShowPairedCellsForTutorial (0);
+		}
 	}
+
+	List<GameObject> _tutorialCellObjsList = new List<GameObject>();
+	void ShowPairedCellsForTutorial(int num)
+	{
+		int cellNum = num;
+		foreach(var pair in _cellsNumsDic)
+		{
+			if(pair.Value == cellNum)
+			{
+				_tutorialCellObjsList.Add (pair.Key);
+			}
+		}
+
+		foreach (var cellObj in _tutorialCellObjsList)
+		{
+			var tickObj = Instantiate (transform.Find ("tick").gameObject, cellObj.transform);
+			tickObj.name = "tick";
+			tickObj.transform.localPosition = Vector3.zero;
+		}
+	}
+
 
 	void ShowHintCells()
 	{
@@ -267,6 +312,31 @@ public class MemoryBoard : MonoBehaviour {
 
 	void CellClick(GameObject cellObj)
 	{
+		if(!_tutorialFinished)
+		{
+			var tickObj = cellObj.transform.Find ("tick");
+			if(tickObj == null)
+			{
+				return;
+			}
+			else
+			{
+				Destroy (tickObj.gameObject);
+				_tutorialCounter++;
+
+				if (_tutorialCounter == 2)
+				{
+					_tutorialCellObjsList.Clear ();
+					ShowPairedCellsForTutorial (1);
+				}
+				if (_tutorialCounter == 4)
+				{
+					_tutorialFinished = true;
+					GamePlayerPrefs.Instance.DoneTutorialMemory ();	
+				}
+			}
+		}
+
 		if (!_cellsNumsDic.ContainsKey (cellObj))
 			return;
 		int cellNum = _cellsNumsDic [cellObj];

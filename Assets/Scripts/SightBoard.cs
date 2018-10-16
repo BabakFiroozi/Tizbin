@@ -42,8 +42,6 @@ public class SightBoard : MonoBehaviour
 
 	[SerializeField] GameObject[] _albumeObjects = null;
 
-	[SerializeField] GameObject _tutorialPageObj = null;
-
 	RectTransform _topAlbume = null;
 	RectTransform _bottAlbume = null;
 
@@ -54,11 +52,17 @@ public class SightBoard : MonoBehaviour
 	[SerializeField] GameObject _failPanelObj = null;
 	[SerializeField] GameObject _failedAlert = null;
 
+	List<GameObject> _guideCirclesist = new List<GameObject> ();
+
 	[SerializeField] float[] _hitDuratinaArr = null;
 	float _hitDuratin = 0;
 	float _hitTimer = 0;
 
+	[SerializeField] GameObject _tutorialPageObj = null;
+	int _tutorialCounter = 0;
+	bool _tutorialFinished = false;
 	bool _firstShowTutorialPage = false;
+
 
 	IEnumerator ShowHint()
 	{
@@ -158,10 +162,6 @@ public class SightBoard : MonoBehaviour
 		GenerateAlbume ();
 	}
 
-	int _tutorialCounter = 0;
-	bool _tutorialFinished = false;
-
-	List<GameObject> _guideCirclesist = new List<GameObject> ();
 
 	void ShowGuidCircles(bool isTut)
 	{

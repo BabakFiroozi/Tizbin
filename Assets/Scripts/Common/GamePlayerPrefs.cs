@@ -41,6 +41,19 @@ public class GamePlayerPrefs
 		return rec == 1;
 	}
 
+	public void DoneTutorialMemory()
+	{
+		string key = "Tutorial_Done_memory";
+		PlayerPrefs.SetInt (key, 1);
+	}
+
+	public bool IsTutorialDoneMemory()
+	{
+		string key = "Tutorial_Done_memory";
+		int rec = PlayerPrefs.GetInt (key, 0);
+		return rec == 1;
+	}
+
 	public void SetPlayRecord(GameModes mode, int stage, int rec)
 	{
 		string key = mode.ToString () + stage.ToString () + "record";

@@ -178,6 +178,7 @@ public class SightBoard : MonoBehaviour
 			if (_tutorialCounter > 3)
 			{
 				_tutorialFinished = true;
+				GamePlayerPrefs.Instance.DoneTutorialSight ();
 				return;
 			}
 		}
@@ -364,7 +365,7 @@ public class SightBoard : MonoBehaviour
 	{
 		_hitTimer = 0;
 
-		if(cond == 0)
+		if(cond == 0)//right
 		{
 			_perventTouch.SetActive (true);
 			if (_hintRoutine != null)
@@ -373,9 +374,6 @@ public class SightBoard : MonoBehaviour
 			StartCoroutine (GoNextGeneration ());
 			if (_tutorialFinished)
 				_succeedCount++;
-
-			if (_tutorialFinished)
-				GamePlayerPrefs.Instance.DoneTutorialSight ();
 
 			//Right selection sound
 		}

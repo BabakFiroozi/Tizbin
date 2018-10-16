@@ -590,10 +590,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uFE8F\uFEEE\uFEA7 \uFEED\uFEAD \uFEA9\uFE8E\uFEF4\uFEE3 \uFEEA\uFEDB \uFEF0\uFEDF\uFE8E\uFEDC\uFEB7\uFE8D
-    \r\n\uFEE6\uFEDB \uFEC6\uFED4\uFEA3 \uFEED \uFEAD\uFE8E\uFB59\uFEB4\uFE91 \uFEAE\uFEC3\uFE8E\uFEA7
-    \uFEEA\uFE91 \r\n\uFE96\uFEB4\uFEEB \uFE8E\uFE97\uFEED\uFEA9 \uFEDE\uFEDC\uFEB7
-    \uFEAE\uFEEB \uFEAF\uFE8D \uFEED \r"
+  m_Text: " \uFE8F\uFEEE\uFEA7 \uFEED\uFEAD \uFEA9\uFE8E\uFEF4\uFEE3 \uFEEA\uFEDB
+    \uFEF0\uFEF3\uFE8E\uFEEC\uFEE0\uFEDC\uFEB7 \r\n\uFEE6\uFEDB \uFEC6\uFED4\uFEA3
+    \uFEED \uFEAD\uFE8E\uFB59\uFEB4\uFE91 \uFEAE\uFEC3\uFE8E\uFEA7 \uFEEA\uFE91 \r\n\uFE96\uFEB4\uFEEB
+    \uFE8E\uFE97\uFEED\uFEA9 \uFEDE\uFEDC\uFEB7 \uFEAE\uFEEB \uFEAF\uFE8D \uFEED \r"
 --- !u!222 &257820049
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1988,8 +1988,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 60}
-  m_SizeDelta: {x: 600.7, y: 458.9}
+  m_AnchoredPosition: {x: 0, y: 66}
+  m_SizeDelta: {x: 660, y: 510}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &746508985
 MonoBehaviour:
@@ -2920,7 +2920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.49803922}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.627451}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3747,7 +3747,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -233}
+  m_AnchoredPosition: {x: 0, y: -250}
   m_SizeDelta: {x: 275, y: 120.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1677764242
@@ -4122,10 +4122,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: " \uFEEA\uFEDB \uFEF0\uFEF3\uFE8E\uFE97\uFEED\uFEA9 \uFEEF\uFE8E\uFEEC\uFEE0\uFEDC\uFEB7
-    \uFE8E\uFEDF\uFE8E\uFEA3 \r\n \uFEAE\uFEC3\uFE8E\uFEA7 \uFEEA\uFE91 \uFEED\uFEAD
-    \uFEEF\uFEA9\uFEAE\uFEDB \uFEC6\uFED4\uFEA3 \r\n \uFEE5\uFE8E\uFEF4\uFE91 \uFE8E\uFE97
-    \uFEE5\uFEEE\uFEB7\uFEED\uFEAD \uFEE5\uFEB0\uFE91 \uFEED \uFEAD\uFE8E\uFEF4\uFE91
-    \r"
+    \uFE8E\uFEDF\uFE8E\uFEA3 \r\n\uFE95\uFEAE\uFEC3\uFE8E\uFEA7 \uFEEA\uFE91 \uFEED\uFEAD
+    \uFEEF\uFEA9\uFEAE\uFEDB \uFEC6\uFED4\uFEA3 \r\n\uFEE5\uFEEE\uFEB7\uFE8E\uFEEC\uFEE7\uFE8E\uFEDC\uFEE3
+    \uFEED\uFEAD \uFEE5\uFEB0\uFE91 \uFEED \uFEAD\uFE8E\uFEF4\uFE91 \r"
 --- !u!222 &1821986933
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -2541,7 +2541,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "\uFEEA\uFEF3 \uFEE6\uFEF4\uFEF3\uFE8E\uFB58 \uFEED \uFE8E\uFEDF\uFE8E\uFE91
     \uFED1\uFEAE\uFEC7 \uFEEE\uFE97 \r\n\uFEA9\uFEAE\uFB95\uFE91 \uFEEE\uFEE7\uFEED\uFE8D
-    \uFEEA\uFEDB\uFEAE\uFE98\uFEB8\uFEE3 \uFEB2\uFEDC\uFECB\n \uFEED\uFEAD \uFEF0\uFEDF\uFEED\uFE8D
+    \uFEEA\uFEDB\uFEAE\uFE98\uFEB8\uFEE3 \uFEDE\uFEDC\uFEB7 \r\n \uFEED\uFEAD \uFEF0\uFEDF\uFEED\uFE8D
     \uFEEF\uFE8E\uFE97 3 .\uFEE6\uFEDB\uFE8D\uFEAA\uFEF4\uFB58 \r\n\uFEEA\uFEE3\uFEED\uFEAA\uFEDB
     \uFEEA\uFB95\uFEF4\uFEE3 \uFE96\uFEEC\uFE91 \r"
 --- !u!222 &637526205
@@ -5065,7 +5065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.49803922}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.627451}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5271,7 +5271,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -233}
+  m_AnchoredPosition: {x: 0, y: -245}
   m_SizeDelta: {x: 275, y: 120.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1830032880
@@ -6252,7 +6252,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 600.7, y: 458.9}
+  m_SizeDelta: {x: 640, y: 490}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2048086598
 MonoBehaviour:

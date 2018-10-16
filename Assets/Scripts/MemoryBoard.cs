@@ -135,7 +135,8 @@ public class MemoryBoard : MonoBehaviour {
 			_tutorialPageObj.SetActive (true);
 			_tutorialPageObj.transform.Find ("Backg/button").GetComponent<Button> ().onClick.AddListener (() => {
 				_tutorialPageObj.SetActive(false);
-				StartCoroutine (ShowFirstGlimp ());
+				if(_playDuration == -1)
+					StartCoroutine (ShowFirstGlimp ());
 			});
 		}
 
@@ -149,10 +150,10 @@ public class MemoryBoard : MonoBehaviour {
 			StartCoroutine (ShowHelpPics ());
 		});
 		_backButton.onClick.AddListener (() => {
-			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_STAGE_MENU);
+			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_STAGE_MENU);
 		});
 		_replyButton.onClick.AddListener (() => {
-			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_GAME_MEMORY);
+			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_GAME_MEMORY);
 		});
 
 		UpdateUiTexts ();
@@ -193,8 +194,15 @@ public class MemoryBoard : MonoBehaviour {
 
 
 		if(!_tutorialFinished)
-		{
+		{			
 			ShowPairedCellsForTutorial (0);
+
+			_tutorialPageObj.SetActive (true);
+			_tutorialPageObj.transform.Find ("Backg/text1").gameObject.SetActive (false);
+			_tutorialPageObj.transform.Find ("Backg/text2").gameObject.SetActive (true);
+			_tutorialPageObj.transform.Find ("Backg/button/text1").gameObject.SetActive (false);
+			_tutorialPageObj.transform.Find ("Backg/button/text2").gameObject.SetActive (true);
+
 		}
 	}
 
@@ -318,6 +326,8 @@ public class MemoryBoard : MonoBehaviour {
 
 	void CellClick(GameObject cellObj)
 	{
+		bool isTutorialFinished = _tutorialFinished;
+
 		if(!_tutorialFinished)
 		{
 			var tickObj = cellObj.transform.Find ("tick");
@@ -381,9 +391,18 @@ public class MemoryBoard : MonoBehaviour {
 				if (_cellsNumsDic.Count == 0)
 					StartCoroutine (FinishGame ());
 
-				_rightSel.DOKill ();
-				_rightSel.DOFade (1, 0);
-				_rightSel.DOFade (0, .3f).SetDelay (.6f);
+				if(isTutorialFinished)
+				{
+					_rightSel.DOKill ();
+					_rightSel.DOFade (1, 0);
+					_rightSel.DOFade (0, .3f).SetDelay (.6f);
+				}
+
+				if (_tutorialCounter == 6)
+				{
+					_tutorialFinished = true;
+					GamePlayerPrefs.Instance.DoneTutorialMemory ();	
+				}
 
 				//right sound
 			}

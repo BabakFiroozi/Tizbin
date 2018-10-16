@@ -187,6 +187,7 @@
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MemoryBoard.cs" />
      <Compile Include="Assets\Scripts\PlayFabLogin.cs" />
+     <Compile Include="Assets\Scripts\SceneTransitor.cs" />
      <Compile Include="Assets\Scripts\SightBoard.cs" />
      <Compile Include="Assets\Scripts\SplashScene.cs" />
      <Compile Include="Assets\Scripts\StageSelection.cs" />

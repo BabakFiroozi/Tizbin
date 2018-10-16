@@ -15,7 +15,7 @@ public class StageSelection : MonoBehaviour
 	void Start ()
 	{
 		_backButton.onClick.AddListener (() => {
-			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_MAIN_MENU);
+			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_MAIN_MENU);
 		});
 
 		var textAsset = Resources.Load<TextAsset> ("Levels/" + DataCarrier.Instance.GameMode.ToString ());
@@ -54,7 +54,7 @@ public class StageSelection : MonoBehaviour
 	void StageButtonClick(int index)
 	{
 		DataCarrier.Instance.SelectedStage = index;
-		UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_GAME_MEMORY);
+		SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_GAME_MEMORY);
 	}
 }
 

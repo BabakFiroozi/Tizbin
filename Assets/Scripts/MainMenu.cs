@@ -47,9 +47,6 @@ public class MainMenu : MonoBehaviour
 	{
 	}
 
-	bool _toggleShowMemButton = false;
-	bool _toggleShowSightButton = false;
-
 
 	void DiffButtonClick(GameModes mode)
 	{
@@ -80,8 +77,8 @@ public class MainMenu : MonoBehaviour
 
 		DataCarrier.Instance.GameMode = mode;
 		if (_memSelected)
-			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_STAGE_MENU);
+			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_STAGE_MENU);
 		else
-			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_GAME_SIGHT);
+			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_GAME_SIGHT);
 	}
 }

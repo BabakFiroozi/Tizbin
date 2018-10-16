@@ -159,7 +159,7 @@ public class SightBoard : MonoBehaviour
 		});
 
 		_backButton.onClick.AddListener (() => {
-			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_MAIN_MENU);
+			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_MAIN_MENU);
 		});
 
 		GenerateAlbume ();

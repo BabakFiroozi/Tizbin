@@ -51,16 +51,16 @@ public class SucceedPage : MonoBehaviour
 		}
 
 		_retryButton.onClick.AddListener (() => {
-			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_GAME_MEMORY);
+			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_GAME_MEMORY);
 		});
 
 		_nextButton.onClick.AddListener (() => {
 			DataCarrier.Instance.SelectedStage++;
-			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_GAME_MEMORY);
+			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_GAME_MEMORY);
 		});
 
 		_homeButton.onClick.AddListener (() => {
-			UnityEngine.SceneManagement.SceneManager.LoadScene (DataCarrier.SCENE_MAIN_MENU);
+			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_MAIN_MENU);
 		});
 
 		_leaderboardButton.onClick.AddListener (() => {

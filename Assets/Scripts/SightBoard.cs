@@ -159,6 +159,8 @@ public class SightBoard : MonoBehaviour
 		});
 
 		_backButton.onClick.AddListener (() => {
+			_perventTouch.SetActive(true);
+			_hitTimer = 0;
 			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_MAIN_MENU);
 		});
 

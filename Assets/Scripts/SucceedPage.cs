@@ -63,9 +63,12 @@ public class SucceedPage : MonoBehaviour
 			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_MAIN_MENU);
 		});
 
-		_leaderboardButton.onClick.AddListener (() => {
-			gameObject.SetActive(false);
-		});
+		if(_leaderboardButton != null)
+		{
+			_leaderboardButton.onClick.AddListener (() => {
+				//show leaderboard if game has
+			});
+		}
 
 	}
 	

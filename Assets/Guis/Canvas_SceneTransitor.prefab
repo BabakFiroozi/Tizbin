@@ -97,8 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tricksTextAsset: {fileID: 0}
   _fadeEffectBackg: {fileID: 114857520482209866}
-  _transitTime: 0.5
-  Transit: 0
+  _transitTime: 0.3
+  _transit: 0
 --- !u!114 &114857520482209866
 MonoBehaviour:
   m_ObjectHideFlags: 1

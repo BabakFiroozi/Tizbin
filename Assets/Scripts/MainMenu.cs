@@ -28,10 +28,18 @@ public class MainMenu : MonoBehaviour
 		_memoryButton.onClick.AddListener (() => {
 			_memSelected = true;
 			_diffPage.SetActive(true);
+
+			var animRectTr = _diffPage.GetComponent<RectTransform>();
+			animRectTr.localScale = new Vector3(1.2f , 1.2f, 1);
+			animRectTr.DOScale(1, .3f).SetEase(Ease.OutBounce);
 		});
 		_sightButton.onClick.AddListener (() => {
 			_memSelected = false;
 			_diffPage.SetActive(true);
+
+			var animRectTr = _diffPage.GetComponent<RectTransform>();
+			animRectTr.localScale = new Vector3(1.2f , 1.2f, 1);
+			animRectTr.DOScale(1, .3f).SetEase(Ease.OutBounce);
 		});
 
 		for(int i = 0; i < _diffButtons.Length; ++i)

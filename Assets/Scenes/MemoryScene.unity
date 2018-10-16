@@ -687,7 +687,7 @@ MonoBehaviour:
   _retryButton: {fileID: 2013293349}
   _nextButton: {fileID: 865405595}
   _homeButton: {fileID: 544631249}
-  _leaderboardButton: {fileID: 2013293349}
+  _leaderboardButton: {fileID: 0}
   _durationText: {fileID: 1900870558}
   _wrongText: {fileID: 1485944936}
   _hintText: {fileID: 839326568}

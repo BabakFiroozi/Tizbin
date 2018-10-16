@@ -30,6 +30,8 @@ public class SightBoard : MonoBehaviour
 		get{return _hintsCount;}
 	}
 
+	[SerializeField] GameObject _circleObj = null;
+
 	[SerializeField] GameObject _perventTouch = null;
 
 	[SerializeField] Button _hintButton = null;
@@ -48,6 +50,7 @@ public class SightBoard : MonoBehaviour
 	List<GameObject> _commonPics = new List<GameObject>();
 
 	[SerializeField] Image _succeedSign = null;
+	[SerializeField] RectTransform _failSignTr = null;
 
 	[SerializeField] GameObject _failPanelObj = null;
 	[SerializeField] GameObject _failedAlert = null;
@@ -160,6 +163,10 @@ public class SightBoard : MonoBehaviour
 		});
 
 		GenerateAlbume ();
+
+		var pic = _topAlbume.GetChild (0);
+		_circleObj.GetComponent<RectTransform> ().sizeDelta =
+			new Vector2 (pic.GetComponent<RectTransform> ().rect.width, pic.GetComponent<RectTransform> ().rect.height);
 	}
 
 
@@ -179,11 +186,9 @@ public class SightBoard : MonoBehaviour
 			Destroy (obj);
 		_guideCirclesist.Clear ();
 
-		var circleObj = transform.Find ("circle").gameObject;
-		circleObj.GetComponent<RectTransform> ().sizeDelta = new Vector2 (_commonPics [0].GetComponent<RectTransform> ().rect.width, _commonPics [0].GetComponent<RectTransform> ().rect.height);
 		foreach (var obj in _commonPics)
 		{
-			var circle = Instantiate (circleObj, obj.transform.position, circleObj.transform.rotation, obj.transform);
+			var circle = Instantiate (_circleObj, obj.transform.position, _circleObj.transform.rotation, obj.transform);
 			var rectTr = circle.GetComponent<RectTransform> ();
 			rectTr.Rotate (0, 0, Rand (1, 360));
 			circle.GetComponent<Image> ().color = isTut ? Color.green : Color.black;
@@ -348,14 +353,14 @@ public class SightBoard : MonoBehaviour
 			return;
 		}
 
-		FinishGame (_commonPics.Contains (obj) ? 0 : 1);
+		FinishGame (_commonPics.Contains (obj) ? 0 : 1, obj.GetComponent<RectTransform> ());
 	}
 
 	/// <summary>
 	/// cond == 0 is succeed, 1 is wrong select, 2 is time out
 	/// </summary>
 	/// <param name="cond">Cond.</param>
-	void FinishGame(int cond)
+	void FinishGame(int cond, RectTransform cellTr = null)
 	{
 		_hitTimer = 0;
 
@@ -371,11 +376,20 @@ public class SightBoard : MonoBehaviour
 
 			if (_tutorialFinished)
 				GamePlayerPrefs.Instance.DoneTutorialSight ();
+
+			//Right selection sound
 		}
 		else
 		{
+			var circleObj = transform.Find ("circle").gameObject;
+			_failSignTr.sizeDelta = new Vector2 (circleObj.GetComponent<RectTransform> ().rect.width, circleObj.GetComponent<RectTransform> ().rect.height);
+			Debug.Log (_failSignTr.sizeDelta.ToString ());
+			_failSignTr.SetParent (cellTr);
+			_failSignTr.anchoredPosition = Vector2.zero;
 			_perventTouch.SetActive (true);
 			StartCoroutine (ShowFailedPanel (cond == 2));
+
+			//Wrong selection sound
 		}
 	}
 

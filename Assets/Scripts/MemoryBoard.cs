@@ -12,6 +12,9 @@ public class MemoryBoard : MonoBehaviour {
 		get{return _instance;}
 	}
 
+	[SerializeField] Image _rightSel = null;
+	[SerializeField] Image _wrongSel = null;
+
 	[SerializeField] Sprite[] _allSprites = null;
 
 	[SerializeField] RectTransform _gridContent = null;
@@ -87,6 +90,9 @@ public class MemoryBoard : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		_wrongSel.DOFade (0, 0);
+		_rightSel.DOFade (0, 0);
 
 		_tutorialFinished = GamePlayerPrefs.Instance.IsTutorialDoneMemory ();
 
@@ -374,6 +380,11 @@ public class MemoryBoard : MonoBehaviour {
 
 				if (_cellsNumsDic.Count == 0)
 					StartCoroutine (FinishGame ());
+
+				_rightSel.DOKill ();
+				_rightSel.DOFade (1, 0);
+				_rightSel.DOFade (0, .3f).SetDelay (.6f);
+
 				//right sound
 			}
 			else
@@ -381,6 +392,9 @@ public class MemoryBoard : MonoBehaviour {
 				_lastCellObj = cellObj;
 				StartCoroutine (HideWrongCells ());
 				_wrongCount++;
+				_wrongSel.DOKill ();
+				_wrongSel.DOFade (1, 0);
+				_wrongSel.DOFade (0, .3f).SetDelay (.4f);
 				//wrog sound
 				//hide sound with delay
 			}

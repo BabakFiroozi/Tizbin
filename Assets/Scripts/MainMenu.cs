@@ -15,13 +15,10 @@ public class MainMenu : MonoBehaviour
 
 	bool _memSelected = false;
 
+
 	// Use this for initialization
 	void Start ()
 	{
-		GamePlayerPrefs.Instance.UnlockStage (GameModes.Easy, 0);
-		GamePlayerPrefs.Instance.UnlockStage (GameModes.Normal, 0);
-		GamePlayerPrefs.Instance.UnlockStage (GameModes.Hard, 0);
-
 		_diffPage.transform.Find ("closeButton").GetComponent<Button> ().onClick.AddListener (() => {
 			_diffPage.SetActive (false);
 		});
@@ -45,7 +42,7 @@ public class MainMenu : MonoBehaviour
 		for(int i = 0; i < _diffButtons.Length; ++i)
 		{
 			var button = _diffButtons [i];
-			GameModes mode = (GameModes)((i + 3) * 4);
+            var mode = (GameModes)i;
 			button.onClick.AddListener (() => DiffButtonClick (mode));
 		}
 	}
@@ -85,7 +82,7 @@ public class MainMenu : MonoBehaviour
 
 		DataCarrier.Instance.GameMode = mode;
 		if (_memSelected)
-			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_STAGE_MENU);
+			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_GAME_MEMORY);
 		else
 			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_GAME_SIGHT);
 	}

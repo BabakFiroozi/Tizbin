@@ -18,7 +18,7 @@ public class SucceedPage : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		int t = GamePlayerPrefs.Instance.GetPlayTime (DataCarrier.Instance.GameMode, DataCarrier.Instance.SelectedStage);;
+        int t = 100;
 		int min = t / 60;
 		int sec = t % 60;
 		_durationText.text = string.Format ("{0:00} : {1:00}", min, sec);

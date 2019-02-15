@@ -138,7 +138,9 @@ public class SightBoard : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		if (DataCarrier.Instance.GameMode == GameModes.Normal)
+        if (DataCarrier.Instance.GameMode == GameModes.Easy)
+            _gameMode = 0;
+        if (DataCarrier.Instance.GameMode == GameModes.Normal)
 			_gameMode = 1;
 		if (DataCarrier.Instance.GameMode == GameModes.Hard)
 			_gameMode = 2;	

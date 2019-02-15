@@ -36,15 +36,20 @@ public class MemoryBoard : MonoBehaviour {
 	[SerializeField] GameObject _preventTouchObj = null;
 
 	[SerializeField] GameObject _tutorialPageObj = null;
-	int _tutorialCounter = 0;
+
+    [SerializeField] float _summonDuration = 1.0f;
+
+
+    int _tutorialCounter = 0;
 	bool _tutorialFinished = false;
 	bool _firstShowTutorialPage = false;
 
 	float _glimpTime = 5;
+    int _maxSpritesCount = 20;
+    int _cellsCount = 12;
 
-	[SerializeField] float _summonDuration = 1.0f;
 
-	int _lastCellNumber = -1;
+    int _lastCellNumber = -1;
 	GameObject _lastCellObj = null;
 	GameObject _firstCellObj = null;
 
@@ -59,7 +64,7 @@ public class MemoryBoard : MonoBehaviour {
 	bool _gameFinished;
 	public bool GameFinished
 	{
-		get{return _gameFinished;}
+        get; private set;
 	}
 
 	public int WrongCount
@@ -94,33 +99,68 @@ public class MemoryBoard : MonoBehaviour {
 		_wrongSelectedSign.DOFade (0, 0);
 		_rightSelectedSign.DOFade (0, 0);
 
-		_tutorialFinished = GamePlayerPrefs.Instance.IsTutorialDoneMemory ();
+        _tutorialFinished = GamePlayerPrefs.Instance.IsTutorialDoneMemory();
 
-		if (DataCarrier.Instance.GameMode == GameModes.Normal)
-			_summonDuration *= 2;
+        if (DataCarrier.Instance.GameMode == GameModes.Easy)
+        {
+            _cellsCount = 12;
+            _summonDuration *= 1;
+            _glimpTime = 5;
+        }
+        if (DataCarrier.Instance.GameMode == GameModes.Normal)
+        {
+            _cellsCount = 16;
+            _summonDuration *= 2;
+            _glimpTime = 7;
+        }
 		if (DataCarrier.Instance.GameMode == GameModes.Hard)
-			_summonDuration *= 3;
+        {
+            _cellsCount = 20;
+            _summonDuration *= 3;
+            _glimpTime = 9;
+        }
 
 		_gameModeText.text = (DataCarrier.Instance.SelectedStage + 1) + " " + DataCarrier.Instance.GetString (DataCarrier.Instance.GameMode.ToString ());
-		
-		var textAsset = Resources.Load<TextAsset> ("Levels/" + DataCarrier.Instance.GameMode.ToString ());
-		var jsonObj = JSONObject.Create (textAsset.text);
-		var stage = jsonObj.GetField ("stages").list [DataCarrier.Instance.SelectedStage];
-		var cellsList = stage.GetField ("cells").list;
-		var spritesList = stage.GetField ("sprites").list;
 
-		_glimpTime = stage.GetField ("glimpTime").f;
+        var memCellsList = new List<int>();
+
+        List<int> cellsList = new List<int>();
+        for (int c = 0; c < _cellsCount; ++c)
+            cellsList.Add(c);
+
+        List<int> randomsList = new List<int>();
+        do
+        {
+            int index = UnityEngine.Random.Range(0, cellsList.Count);
+            int cellIndex = cellsList[index];
+            randomsList.Add(cellIndex);
+            memCellsList.Add(cellIndex);
+            cellsList.RemoveAt(index);
+        } while (cellsList.Count > 0);
+
+        List<int> spritesList = new List<int>();
+        for (int c = 0; c < _maxSpritesCount; ++c)
+            spritesList.Add(c);
 
 
-		for(int i = 0; i < cellsList.Count; ++i)
+        randomsList.Clear();
+        do
+        {
+            int index = UnityEngine.Random.Range(0, spritesList.Count);
+            randomsList.Add(spritesList[index]);
+            spritesList.RemoveAt(index);
+        } while (spritesList.Count != _maxSpritesCount - _cellsCount / 2);
+
+
+		for(int i = 0; i < memCellsList.Count; ++i)
 			Instantiate(_cellObj, _gridContent);
 
 		int iter = 0;
-		for(int i = 0; i < cellsList.Count; ++i)
+		for(int i = 0; i < memCellsList.Count; ++i)
 		{
-			int cellIndex = (int)cellsList[i].i;
+			int cellIndex = memCellsList[i];
 			var cellObj = _gridContent.GetChild (cellIndex).gameObject;
-			int spriteIndex = (int)spritesList [iter].i;
+			int spriteIndex = spritesList [iter];
 			cellObj.transform.Find ("pic").GetComponent<Image> ().sprite = _allSprites [spriteIndex];
 
 			cellObj.GetComponent<Button>().onClick.AddListener(()=>CellClick(cellObj));
@@ -150,7 +190,7 @@ public class MemoryBoard : MonoBehaviour {
 			StartCoroutine (ShowHelpPics ());
 		});
 		_backButton.onClick.AddListener (() => {
-			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_STAGE_MENU);
+			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_MAIN_MENU);
 		});
 		_replyButton.onClick.AddListener (() => {
 			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_GAME_MEMORY);
@@ -446,11 +486,6 @@ public class MemoryBoard : MonoBehaviour {
 		_preventTouchObj.SetActive (true);
 
 		yield return new WaitForSeconds (1);
-
-		GamePlayerPrefs.Instance.SetPlayTime (DataCarrier.Instance.GameMode, DataCarrier.Instance.SelectedStage, (int)_playDuration);
-		GamePlayerPrefs.Instance.SetPlayRecord (DataCarrier.Instance.GameMode, DataCarrier.Instance.SelectedStage, _wrongCount);
-
-		GamePlayerPrefs.Instance.UnlockStage ( DataCarrier.Instance.GameMode, DataCarrier.Instance.SelectedStage + 1);
 
 		_succeedPage.SetActive (true);
 		_gameFinished = true;

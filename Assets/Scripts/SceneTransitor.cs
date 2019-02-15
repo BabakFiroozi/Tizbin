@@ -49,7 +49,7 @@ public class SceneTransitor : MonoBehaviour
 			transitTime = _transitTime;
 		}
 
-		if (sceneIndex == -1)
+		if (sceneIndex == DataCarrier.SCENE_CURRENT)
 			_targetSceneIndex = SceneManager.GetActiveScene ().buildIndex;
 		else
 			_targetSceneIndex = sceneIndex;	

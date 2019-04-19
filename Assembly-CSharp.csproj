@@ -190,6 +190,7 @@
     <Compile Include="Assets\Scripts\FailPage.cs" />
     <Compile Include="Assets\Scripts\GameModes.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\MathBoard.cs" />
     <Compile Include="Assets\Scripts\MemoryBoard.cs" />
     <Compile Include="Assets\Scripts\PlayFabLogin.cs" />
     <Compile Include="Assets\Scripts\SceneTransitor.cs" />

@@ -11,13 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuScene.unity
     guid: 8c20c5cb4123f03458fde7465ac2baf1
-  - enabled: 0
-    path: Assets/Scenes/StageScene.unity
-    guid: 0ed8fc1eebcc7ae459bf9d84fd7196c5
+  - enabled: 1
+    path: Assets/Scenes/SightScene.unity
+    guid: 476bf811fc408f441a4d70513aff5d10
   - enabled: 1
     path: Assets/Scenes/MemoryScene.unity
     guid: 168ee54fdc06c724385fafcae87e9371
   - enabled: 1
-    path: Assets/Scenes/SightScene.unity
-    guid: 476bf811fc408f441a4d70513aff5d10
+    path: Assets/Scenes/MathScene.unity
+    guid: 463e946a205daef4e8d8bfba85dc880c
   m_configObjects: {}

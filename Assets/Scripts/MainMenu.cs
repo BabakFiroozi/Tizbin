@@ -6,57 +6,58 @@ using DG.Tweening;
 
 public class MainMenu : MonoBehaviour
 {
-	[SerializeField] Button[] _diffButtons = null;
+    [SerializeField] GameObject _diffPage = null;
 
-	[SerializeField] Button _memoryButton = null;
-	[SerializeField] Button _sightButton = null;
+    [SerializeField] RectTransform _gamesContent = null;
 
-	[SerializeField] GameObject _diffPage = null;
-
-	bool _memSelected = false;
+    GameNames _selectedGame;
 
 
-	// Use this for initialization
-	void Start ()
-	{
-		_diffPage.transform.Find ("closeButton").GetComponent<Button> ().onClick.AddListener (() => {
-			_diffPage.SetActive (false);
-		});
-		_memoryButton.onClick.AddListener (() => {
-			_memSelected = true;
-			_diffPage.SetActive(true);
+    // Use this for initialization
+    void Start()
+    {
+        for (int i = 0; i < (int)GameNames.Count; ++i)
+        {
+            var game = (GameNames)i;
+            var elem = _gamesContent.transform.Find(game.ToString());
+            var button = elem.Find("go").GetComponent<Button>();
+            button.onClick.AddListener(() => SelectGame(game));
+        }
 
-			var animRectTr = _diffPage.GetComponent<RectTransform>();
-			animRectTr.localScale = new Vector3(1.2f , 1.2f, 1);
-			animRectTr.DOScale(1, .3f).SetEase(Ease.OutBounce);
-		});
-		_sightButton.onClick.AddListener (() => {
-			_memSelected = false;
-			_diffPage.SetActive(true);
+        _diffPage.transform.Find("frame/close").GetComponent<Button>().onClick.AddListener(() =>
+        {
+            _diffPage.SetActive(false);
+        });
 
-			var animRectTr = _diffPage.GetComponent<RectTransform>();
-			animRectTr.localScale = new Vector3(1.2f , 1.2f, 1);
-			animRectTr.DOScale(1, .3f).SetEase(Ease.OutBounce);
-		});
-
-		for(int i = 0; i < _diffButtons.Length; ++i)
-		{
-			var button = _diffButtons [i];
+        for (int i = 0; i < (int)GameModes.Count; ++i)
+        {
             var mode = (GameModes)i;
-			button.onClick.AddListener (() => DiffButtonClick (mode));
-		}
-	}
+            var button = _diffPage.transform.Find("frame").Find(mode.ToString()).GetComponent<Button>();
+            button.onClick.AddListener(() => DiffButtonClick(mode));
+        }
+    }
 
-	// Update is called once per frame
-	void Update ()
-	{
-	}
+    // Update is called once per frame
+    void Update()
+    {
+    }
 
 
-	void DiffButtonClick(GameModes mode)
-	{
-		if (mode == GameModes.Easy) {
-			/*PlayFab.ClientModels.UpdateUserDataRequest request = new PlayFab.ClientModels.UpdateUserDataRequest ();
+    void SelectGame(GameNames game)
+    {
+        _selectedGame = game;
+        _diffPage.SetActive(true);
+
+        var animRectTr = _diffPage.transform.Find("frame").gameObject.GetComponent<RectTransform>();
+        animRectTr.localScale = new Vector3(1.2f, 1.2f, 1);
+        animRectTr.DOScale(1, .3f).SetEase(Ease.OutBounce);
+    }
+
+    void DiffButtonClick(GameModes mode)
+    {
+        if (mode == GameModes.Easy)
+        {
+            /*PlayFab.ClientModels.UpdateUserDataRequest request = new PlayFab.ClientModels.UpdateUserDataRequest ();
 			request.Data = new System.Collections.Generic.Dictionary<string, string> ();
 			request.Data.Add ("Name", "Babak");
 			request.Data.Add ("Number", "6");
@@ -78,12 +79,15 @@ public class MainMenu : MonoBehaviour
 			return;
 		}*/
 
-		}
+        }
 
-		DataCarrier.Instance.GameMode = mode;
-		if (_memSelected)
-			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_GAME_MEMORY);
-		else
-			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_GAME_SIGHT);
-	}
+        DataCarrier.Instance.GameMode = mode;
+
+        if (_selectedGame == GameNames.Memory)
+            SceneTransitor.Instance.TransitScene(DataCarrier.SCENE_GAME_MEMORY);
+        if (_selectedGame == GameNames.Sight)
+            SceneTransitor.Instance.TransitScene(DataCarrier.SCENE_GAME_SIGHT);
+        if (_selectedGame == GameNames.Math)
+            SceneTransitor.Instance.TransitScene(DataCarrier.SCENE_GAME_MATH);
+    }
 }

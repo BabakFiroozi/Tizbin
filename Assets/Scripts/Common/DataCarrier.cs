@@ -7,8 +7,9 @@ public class DataCarrier
 	public const int SCENE_MAIN_MENU = 1;
 	public const int SCENE_GAME_MEMORY = 2;
 	public const int SCENE_GAME_SIGHT = 3;
+    public const int SCENE_GAME_MATH = 4;
 
-	public const int MAX_STAGES_COUNT = 20;
+    public const int MAX_STAGES_COUNT = 20;
 
 	public const float TIME_SCALE = 1.0f;
 

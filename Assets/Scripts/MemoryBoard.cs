@@ -45,7 +45,7 @@ public class MemoryBoard : MonoBehaviour
     int _cellsCount = 12;
 
 
-    int _lastCellNumber = -1;
+    int _lastCellIdSelected = -1;
     GameObject _lastCellObj = null;
     GameObject _firstCellObj = null;
     Dictionary<GameObject, int> _cellsNumsDic = new Dictionary<GameObject, int>();
@@ -116,24 +116,24 @@ public class MemoryBoard : MonoBehaviour
         {
             int index = UnityEngine.Random.Range(0, spritesList.Count);
             spritesList.RemoveAt(index);
-        } while (spritesList.Count != _maxSpritesCount - _cellsCount / 2);
+        } while (spritesList.Count != _cellsCount / 2);
 
 
         for (int i = 0; i < memCellsList.Count; ++i)
             Instantiate(_cellObj, _gridContent);
 
-        int iter = 0;
+        int iterId = 0;
         for (int i = 0; i < memCellsList.Count; ++i)
         {
             int cellIndex = memCellsList[i];
             var cellObj = _gridContent.GetChild(cellIndex).gameObject;
-            int spriteIndex = spritesList[iter];
+            int spriteIndex = spritesList[iterId];
             cellObj.transform.Find("pic").GetComponent<Image>().sprite = _allSprites[spriteIndex];
 
             cellObj.GetComponent<Button>().onClick.AddListener(() => CellClick(cellObj));
-            _cellsNumsDic.Add(cellObj, iter);
+            _cellsNumsDic.Add(cellObj, iterId);
 
-            iter += i % 2;
+            iterId += i % 2;
         }
 
         if (!_tutorialFinished && !_firstShowTutorialPage)
@@ -264,7 +264,7 @@ public class MemoryBoard : MonoBehaviour
         {
             if (pair.Key == _firstCellObj)
                 continue;
-            if (pair.Value != _lastCellNumber)
+            if (pair.Value != _lastCellIdSelected)
                 randomsList.Add(pair.Key);
             else
                 helpsList.Add(pair.Key);
@@ -375,17 +375,17 @@ public class MemoryBoard : MonoBehaviour
             return;
         int cellNum = _cellsNumsDic[cellObj];
 
-        if (!_cellsNumsDic.ContainsKey(cellObj))
-            return;
+        //if (!_cellsNumsDic.ContainsKey(cellObj))
+        //    return;
 
         foreach (var ent in _cellsNumsDic)
             ent.Key.transform.Find("ques").gameObject.SetActive(false);
 
-        if (_lastCellNumber == -1)
+        if (_lastCellIdSelected == -1)
         {
             cellObj.transform.Find("pic").gameObject.SetActive(true);
             _firstCellObj = cellObj;
-            _lastCellNumber = cellNum;
+            _lastCellIdSelected = cellNum;
             _helpButton.interactable = false;
             _hintButton.interactable = true;
         }
@@ -393,10 +393,10 @@ public class MemoryBoard : MonoBehaviour
         {
             _helpButton.interactable = true;
             _hintButton.interactable = false;
-            if (cellNum == _lastCellNumber)
+            if (cellNum == _lastCellIdSelected)
             {
                 cellObj.transform.Find("pic").gameObject.SetActive(true);
-                _lastCellNumber = -1;
+                _lastCellIdSelected = -1;
 
                 _lastCellObj = cellObj;
 
@@ -450,7 +450,7 @@ public class MemoryBoard : MonoBehaviour
         _firstCellObj.transform.Find("pic").gameObject.SetActive(false);
         _firstCellObj = null;
         _lastCellObj = null;
-        _lastCellNumber = -1;
+        _lastCellIdSelected = -1;
 
         _preventTouchObj.SetActive(false);
     }

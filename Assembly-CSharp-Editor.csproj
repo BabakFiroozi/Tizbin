@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\EditorMenuItems.cs" />
+    <Compile Include="Assets\Editor\StageGenerator.cs" />
     <Compile Include="Assets\PlayFabEditorExtensions\Editor\PlayFabEditor.cs" />
     <Compile Include="Assets\PlayFabEditorExtensions\Editor\Scripts\Components\ProgressBar.cs" />
     <Compile Include="Assets\PlayFabEditorExtensions\Editor\Scripts\Components\SubMenuComponent.cs" />

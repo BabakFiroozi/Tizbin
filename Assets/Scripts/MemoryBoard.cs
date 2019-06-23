@@ -6,12 +6,7 @@ using DG.Tweening;
 
 public class MemoryBoard : MonoBehaviour
 {
-
-    static MemoryBoard _instance = null;
-    public static MemoryBoard Instance
-    {
-        get { return _instance; }
-    }
+    public static MemoryBoard Instance { get; private set; } = null;
 
     [SerializeField] Image _rightSelectedSign = null;
     [SerializeField] Image _wrongSelectedSign = null;
@@ -53,51 +48,25 @@ public class MemoryBoard : MonoBehaviour
     int _lastCellNumber = -1;
     GameObject _lastCellObj = null;
     GameObject _firstCellObj = null;
-
-    float _playDuration = -1;
-    int _wrongCount = 0;
-    int _hintCount = 0;
-    int _helpCount = 0;
-
-
     Dictionary<GameObject, int> _cellsNumsDic = new Dictionary<GameObject, int>();
 
-    bool _gameFinished;
-    public bool GameFinished
-    {
-        get; private set;
-    }
+    public bool GameFinished { get; private set; }
+    public int WrongCount { get; private set; } = 0;
+    public int HintCount { get; private set; } = 0;
+    public float PlayDuration { get; private set; } = -1;
+    public int HelpCount { get; private set; } = 0;
 
-    public int WrongCount
-    {
-        get { return _wrongCount; }
-    }
+    List<GameObject> _tutorialCellObjsList = new List<GameObject>();
 
-    public int HintCount
-    {
-        get { return _hintCount; }
-    }
-
-    public float PlayDuration
-    {
-        get { return _playDuration; }
-    }
 
     void Awake()
     {
-        _instance = this;
+        Instance = this;
     }
-
-    public int HelpCount
-    {
-        get { return _helpCount; }
-    }
-
 
     // Use this for initialization
     void Start()
     {
-
         _wrongSelectedSign.DOFade(0, 0);
         _rightSelectedSign.DOFade(0, 0);
 
@@ -178,7 +147,7 @@ public class MemoryBoard : MonoBehaviour
             _tutorialPageObj.transform.Find("Backg/button").GetComponent<Button>().onClick.AddListener(() =>
             {
                 _tutorialPageObj.SetActive(false);
-                if (_playDuration == -1)
+                if (PlayDuration == -1)
                     StartCoroutine(ShowFirstGlimp());
             });
         }
@@ -238,7 +207,7 @@ public class MemoryBoard : MonoBehaviour
         _helpButton.interactable = true;
         _hintButton.interactable = false;
 
-        _playDuration = 0;
+        PlayDuration = 0;
 
 
         if (!_tutorialFinished)
@@ -258,7 +227,6 @@ public class MemoryBoard : MonoBehaviour
         _wrongSelectedSign.GetComponent<RectTransform>().anchoredPosition = _rightSelectedSign.GetComponent<RectTransform>().anchoredPosition;
     }
 
-    List<GameObject> _tutorialCellObjsList = new List<GameObject>();
     void ShowPairedCellsForTutorial(int num)
     {
         int cellNum = num;
@@ -287,7 +255,7 @@ public class MemoryBoard : MonoBehaviour
         if (_cellsNumsDic.Count < 4)
             return;
 
-        _hintCount++;
+        HintCount++;
 
         //GamePlayerPrefs.Instance.SetHint (GamePlayerPrefs.Instance.GetHint() - 1);
 
@@ -324,7 +292,7 @@ public class MemoryBoard : MonoBehaviour
         if (_firstCellObj != null)
             yield break;
 
-        _helpCount++;
+        HelpCount++;
 
         //GamePlayerPrefs.Instance.SetHelp (GamePlayerPrefs.Instance.GetHelp() - 1);
 
@@ -365,11 +333,11 @@ public class MemoryBoard : MonoBehaviour
     void Update()
     {
 
-        if (_gameFinished)
+        if (GameFinished)
             return;
 
-        if (_playDuration != -1)
-            _playDuration += Time.deltaTime;
+        if (PlayDuration != -1)
+            PlayDuration += Time.deltaTime;
     }
 
     void UpdateUiTexts()
@@ -464,7 +432,7 @@ public class MemoryBoard : MonoBehaviour
             {
                 _lastCellObj = cellObj;
                 StartCoroutine(HideWrongCells());
-                _wrongCount++;
+                WrongCount++;
                 _wrongSelectedSign.DOKill();
                 _wrongSelectedSign.DOFade(1, 0);
                 _wrongSelectedSign.DOFade(0, .3f).SetDelay(.4f);
@@ -498,7 +466,7 @@ public class MemoryBoard : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         _succeedPage.SetActive(true);
-        _gameFinished = true;
+        GameFinished = true;
 
         yield return new WaitForSeconds(1);
 

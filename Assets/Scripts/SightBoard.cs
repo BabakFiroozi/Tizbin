@@ -6,29 +6,11 @@ using DG.Tweening;
 
 public class SightBoard : MonoBehaviour
 {
-    static SightBoard _instance = null;
-    public static SightBoard Instance
-    {
-        get { return _instance; }
-    }
+    public static SightBoard Instance { get; private set; } = null;
 
-    int _succeedCount = 0;
-    public int SucceedCount
-    {
-        get { return _succeedCount; }
-    }
-
-    int _helpsCount = 0;
-    public int HelpsCount
-    {
-        get { return _helpsCount; }
-    }
-
-    int _hintsCount = 0;
-    public int HintsCount
-    {
-        get { return _hintsCount; }
-    }
+    public int SucceedCount { get; private set; } = 0;
+    public int HelpsCount { get; private set; } = 0;
+    public int HintsCount { get; private set; } = 0;
 
     [SerializeField] GameObject _circleObj = null;
 
@@ -66,10 +48,15 @@ public class SightBoard : MonoBehaviour
     bool _tutorialFinished = false;
     bool _firstShowTutorialPage = false;
 
+    Coroutine _hintRoutine = null;
+
+    int _gameMode = 0;
+
+
 
     IEnumerator ShowHint()
     {
-        _hintsCount++;
+        HintsCount++;
 
         _hintButton.interactable = false;
 
@@ -126,11 +113,9 @@ public class SightBoard : MonoBehaviour
         _hintButton.interactable = true;
     }
 
-    Coroutine _hintRoutine = null;
-
     void Awake()
     {
-        _instance = this;
+        Instance = this;
 
         _tutorialFinished = GamePlayerPrefs.Instance.IsTutorialDoneSight();
     }
@@ -156,7 +141,7 @@ public class SightBoard : MonoBehaviour
 
         _helpButton.onClick.AddListener(() =>
         {
-            _helpsCount++;
+            HelpsCount++;
             _hitTimer += _hitDuratin / 2;
             if (_hitTimer > _hitDuratin)
                 _hitDuratin = _hitTimer;
@@ -209,8 +194,6 @@ public class SightBoard : MonoBehaviour
         }
 
     }
-
-    int _gameMode = 0;
 
 
     void GenerateAlbume()
@@ -383,7 +366,7 @@ public class SightBoard : MonoBehaviour
             _hintButton.interactable = true;
             StartCoroutine(GoNextGeneration());
             if (_tutorialFinished)
-                _succeedCount++;
+                SucceedCount++;
 
             //Right selection sound
         }

@@ -99,12 +99,10 @@ public class MemoryBoard : MonoBehaviour
         for (int c = 0; c < _cellsCount; ++c)
             cellsList.Add(c);
 
-        List<int> randomsList = new List<int>();
         do
         {
             int index = UnityEngine.Random.Range(0, cellsList.Count);
             int cellIndex = cellsList[index];
-            randomsList.Add(cellIndex);
             memCellsList.Add(cellIndex);
             cellsList.RemoveAt(index);
         } while (cellsList.Count > 0);
@@ -114,11 +112,9 @@ public class MemoryBoard : MonoBehaviour
             spritesList.Add(c);
 
 
-        randomsList.Clear();
         do
         {
             int index = UnityEngine.Random.Range(0, spritesList.Count);
-            randomsList.Add(spritesList[index]);
             spritesList.RemoveAt(index);
         } while (spritesList.Count != _maxSpritesCount - _cellsCount / 2);
 

@@ -13,6 +13,5 @@ public class EditorMenuItems
 	{
 		if (EditorUtility.DisplayDialog ("Warning", "Are you sure to clear player prefrences?", "Yes", "No"))
 			PlayerPrefs.DeleteAll ();
-	}
-
+	}   
 }

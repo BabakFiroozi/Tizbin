@@ -37,7 +37,7 @@ public class SightBoard : MonoBehaviour
     [SerializeField] GameObject _failPanelObj = null;
     [SerializeField] GameObject _failedAlert = null;
 
-    List<GameObject> _guideCirclesist = new List<GameObject>();
+    List<GameObject> _guideCirclesList = new List<GameObject>();
 
     [SerializeField] float[] _hitDuratinaArr = null;
     float _hitDuratin = 0;
@@ -175,9 +175,9 @@ public class SightBoard : MonoBehaviour
             }
         }
 
-        foreach (var obj in _guideCirclesist)
+        foreach (var obj in _guideCirclesList)
             Destroy(obj);
-        _guideCirclesist.Clear();
+        _guideCirclesList.Clear();
 
         foreach (var obj in _commonPics)
         {
@@ -190,7 +190,7 @@ public class SightBoard : MonoBehaviour
             seq.Append(rectTr.DOScale(1.1f, .2f));
             seq.Append(rectTr.DOScale(1.0f, .2f));
             seq.SetLoops(isTut ? -1 : 3);
-            _guideCirclesist.Add(circle);
+            _guideCirclesList.Add(circle);
         }
 
     }

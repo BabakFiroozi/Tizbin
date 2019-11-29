@@ -3973,7 +3973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 98.9, y: -542.8}
+  m_AnchoredPosition: {x: 98.8999, y: -542.80005}
   m_SizeDelta: {x: -197.7, y: -1085.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1753169870
@@ -4385,6 +4385,7 @@ MonoBehaviour:
   _preventTouchObj: {fileID: 1584621645}
   _tutorialPageObj: {fileID: 1294718350}
   _summonDuration: 1
+  _tutorialTick: {fileID: 510302223}
 --- !u!1 &1900870556
 GameObject:
   m_ObjectHideFlags: 0

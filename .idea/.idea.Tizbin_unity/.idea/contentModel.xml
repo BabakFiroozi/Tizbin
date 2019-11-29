@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Babak\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Babak\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Tizbin_unity.1247999310.00" t="ExcludeRecursive" />
+    <e p="E:\MyJobProjects\Tizbin\Tizbin_unity" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="DOTween" t="Include">
+          <e p="Modules" t="Include">
+            <e p="DOTweenModuleAudio.cs" t="Include" />
+            <e p="DOTweenModulePhysics.cs" t="Include" />
+            <e p="DOTweenModulePhysics2D.cs" t="Include" />
+            <e p="DOTweenModuleSprite.cs" t="Include" />
+            <e p="DOTweenModuleUI.cs" t="Include" />
+            <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+            <e p="DOTweenModuleUtils.cs" t="Include" />
+          </e>
+          <e p="readme.txt" t="Include" />
+        </e>
+        <e p="Editor" t="Include">
+          <e p="EditorMenuItems.cs" t="Include" />
+          <e p="StageGenerator.cs" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Common" t="Include">
+            <e p="DataCarrier.cs" t="Include" />
+            <e p="GamePlayerPrefs.cs" t="Include" />
+            <e p="JSONObject.cs" t="Include" />
+            <e p="LayerMaskUtil.cs" t="Include" />
+          </e>
+          <e p="ConfirmScreen.cs" t="Include" />
+          <e p="FailPage.cs" t="Include" />
+          <e p="GameAsset.cs" t="Include" />
+          <e p="GameModes.cs" t="Include" />
+          <e p="MainMenu.cs" t="Include" />
+          <e p="MathBoard.cs" t="Include" />
+          <e p="MemoryBoard.cs" t="Include" />
+          <e p="PlayFabLogin.cs" t="Include" />
+          <e p="PopupScreen.cs" t="Include" />
+          <e p="SceneTransitor.cs" t="Include" />
+          <e p="SightBoard.cs" t="Include" />
+          <e p="SplashScene.cs" t="Include" />
+          <e p="StoreNames.cs" t="Include" />
+          <e p="SucceedPage.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Tizbin_unity.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>

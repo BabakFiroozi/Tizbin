@@ -33,7 +33,9 @@ public class MemoryBoard : MonoBehaviour
 
     [SerializeField] GameObject _tutorialPageObj = null;
 
-    [SerializeField] float _summonDuration = 1.0f;
+    [SerializeField] float _glimpDuration = 1.0f;
+
+    [SerializeField] GameObject _tutorialTick = null;
 
 
     int _tutorialCounter = 0;
@@ -75,29 +77,30 @@ public class MemoryBoard : MonoBehaviour
         if (DataCarrier.Instance.GameMode == GameModes.Easy)
         {
             _cellsCount = 12;
-            _summonDuration *= 1;
+            _glimpDuration *= 1;
             _glimpTime = 5;
         }
         if (DataCarrier.Instance.GameMode == GameModes.Normal)
         {
             _cellsCount = 16;
-            _summonDuration *= 2;
+            _glimpDuration *= 2;
             _glimpTime = 7;
         }
         if (DataCarrier.Instance.GameMode == GameModes.Hard)
         {
             _cellsCount = 20;
-            _summonDuration *= 3;
+            _glimpDuration *= 3;
             _glimpTime = 9;
         }
 
         _gameModeText.text = (DataCarrier.Instance.SelectedStage + 1) + " " + DataCarrier.Instance.GetString(DataCarrier.Instance.GameMode.ToString());
 
-        var memCellsList = new List<int>();
 
         List<int> cellsList = new List<int>();
         for (int c = 0; c < _cellsCount; ++c)
             cellsList.Add(c);
+
+        var memCellsList = new List<int>();
 
         do
         {
@@ -110,7 +113,6 @@ public class MemoryBoard : MonoBehaviour
         List<int> spritesList = new List<int>();
         for (int c = 0; c < _maxSpritesCount; ++c)
             spritesList.Add(c);
-
 
         do
         {
@@ -236,7 +238,7 @@ public class MemoryBoard : MonoBehaviour
 
         foreach (var cellObj in _tutorialCellObjsList)
         {
-            var tickObj = Instantiate(transform.Find("tick").gameObject, cellObj.transform);
+            var tickObj = Instantiate(_tutorialTick, cellObj.transform);
             tickObj.name = "tick";
             tickObj.transform.localPosition = Vector3.zero;
         }
@@ -305,7 +307,7 @@ public class MemoryBoard : MonoBehaviour
             image.DOFade(.5f, fadeTime);
         }
 
-        yield return new WaitForSeconds(_summonDuration);
+        yield return new WaitForSeconds(_glimpDuration);
 
         foreach (var pair in _cellsNumsDic)
         {
@@ -373,10 +375,8 @@ public class MemoryBoard : MonoBehaviour
 
         if (!_cellsNumsDic.ContainsKey(cellObj))
             return;
-        int cellNum = _cellsNumsDic[cellObj];
 
-        //if (!_cellsNumsDic.ContainsKey(cellObj))
-        //    return;
+        int cellNum = _cellsNumsDic[cellObj];
 
         foreach (var ent in _cellsNumsDic)
             ent.Key.transform.Find("ques").gameObject.SetActive(false);

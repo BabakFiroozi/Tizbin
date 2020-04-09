@@ -2,477 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fc123a8-cabb-448d-be26-c6d4ff01e116" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Server.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Server/AlbumeModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Server/AlbumeModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Server/GetAllPictureIdsModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Server/GetAllPictureIdsModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Server/Server.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Server/Server.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Server/ServerData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Server/ServerData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tizbin_unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tizbin_unity/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tizbin_unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tizbin_unity/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween.XML" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/DOTween.XML" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween.XML.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/DOTween.XML.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/DOTween.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween.dll.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/DOTween.dll.mdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween.dll.mdb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/DOTween.dll.mdb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/DOTween.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween43.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween43.dll.mdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween43.dll.mdb.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween43.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween43.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween43.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween46.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween46.dll.mdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween46.dll.mdb.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween46.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween46.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween46.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween50.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween50.dll.mdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween50.dll.mdb.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween50.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween50.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/DOTween50.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/Editor.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/Editor/DOTweenEditor.XML" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/Editor/DOTweenEditor.XML" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/Editor/DOTweenEditor.XML.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/Editor/DOTweenEditor.XML.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/Editor/DOTweenEditor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/Editor/DOTweenEditor.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/Editor/DOTweenEditor.dll.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/Editor/DOTweenEditor.dll.mdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/Editor/DOTweenEditor.dll.mdb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/Editor/DOTweenEditor.dll.mdb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/Editor/DOTweenEditor.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/Editor/DOTweenEditor.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/Editor/Imgs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/Editor/Imgs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/Editor/Imgs/DOTweenIcon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/Editor/Imgs/DOTweenIcon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/Editor/Imgs/Footer.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/Editor/Imgs/Footer.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/Editor/Imgs/Footer_dark.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/Editor/Imgs/Footer_dark.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/Editor/Imgs/Header.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/Editor/Imgs/Header.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/readme.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOTween/readme.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/readme.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/EditorMenuItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/EditorMenuItems.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Guis/frame.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Guis/frame.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/PlayFabEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/PlayFabEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Resources/PlayFabEditorPrefsSO.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Resources/PlayFabEditorPrefsSO.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Resources/PlayFabUnitySdk.unitypackage" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Resources/PlayFabUnitySdk.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Components.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Components/ProgressBar.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Components/ProgressBar.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Components/SubMenuComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Components/SubMenuComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Components/TitleDataEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Components/TitleDataEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Components/TitleDataViewer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Components/TitleDataViewer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Components/TitleInternalDataEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Components/TitleInternalDataEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Components/TitleInternalDataViewer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Components/TitleInternalDataViewer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels/PlayFabEditorAuthenticate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels/PlayFabEditorAuthenticate.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels/PlayFabEditorDataMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels/PlayFabEditorDataMenu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels/PlayFabEditorHeader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels/PlayFabEditorHeader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels/PlayFabEditorHelpMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels/PlayFabEditorHelpMenu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels/PlayFabEditorMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels/PlayFabEditorMenu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels/PlayFabEditorSDKTools.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels/PlayFabEditorSDKTools.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels/PlayFabEditorSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels/PlayFabEditorSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels/PlayFabEditorToolsMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Panels/PlayFabEditorToolsMenu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/PlayFabEditorSDK.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/PlayFabEditorSDK/ISerializer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/PlayFabEditorSDK/ISerializer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/PlayFabEditorSDK/PlayFabEditorApi.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/PlayFabEditorSDK/PlayFabEditorApi.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/PlayFabEditorSDK/PlayFabEditorHttp.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/PlayFabEditorSDK/PlayFabEditorHttp.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/PlayFabEditorSDK/PlayFabEditorModels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/PlayFabEditorSDK/PlayFabEditorModels.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/PlayFabEditorSDK/SimpleJson.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/PlayFabEditorSDK/SimpleJson.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Utils.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Utils/EditorCoroutine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Utils/EditorCoroutine.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Utils/PlayFabEditorDataService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Utils/PlayFabEditorDataService.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Utils/PlayFabEditorHelper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Utils/PlayFabEditorHelper.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Utils/PlayFabEditorPrefsSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Utils/PlayFabEditorPrefsSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Utils/PlayFabEditorUtils.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Utils/PlayFabEditorUtils.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Utils/PlayFabEditorVersion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Utils/PlayFabEditorVersion.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Utils/PlayFabGuiFieldHelper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Scripts/Utils/PlayFabGuiFieldHelper.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Fonts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Fonts/Avalon Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Fonts/Avalon Bold.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Fonts/Avalon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Fonts/Avalon.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/Black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/Black.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/Clear.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/Clear.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/Gray_base.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/Gray_base.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/Gray_dk1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/Gray_dk1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/Gray_lt1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/Gray_lt1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/Gray_lt2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/Gray_lt2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/Orange.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/Orange.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/Square.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/Square.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/White.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/White.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/checkmark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/checkmark.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/checkmark_off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/checkmark_off.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/checkmark_on.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/checkmark_on.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/dashboardIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/dashboardIcon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/dashboardIconHover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/dashboardIconHover.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/dn_colored.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/dn_colored.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/dn_gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/dn_gray.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/green.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/pfFullLogo_O.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/pfFullLogo_O.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/pfFullLogo_W.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/pfFullLogo_W.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/playfablogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/playfablogo.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/r_colored.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/r_colored.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/r_gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/r_gray.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/red.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/yellow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/Images/yellow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/PlayFabStyles.guiskin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/UI/PlayFabStyles.guiskin.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Admin.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Admin/PlayFabAdminAPI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Admin/PlayFabAdminAPI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Admin/PlayFabAdminModels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Admin/PlayFabAdminModels.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Admin/PlayFabEvents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Admin/PlayFabEvents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Admin/PlayFabSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Admin/PlayFabSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Authentication.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Authentication/PlayFabAuthenticationAPI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Authentication/PlayFabAuthenticationAPI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Authentication/PlayFabAuthenticationModels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Authentication/PlayFabAuthenticationModels.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Authentication/PlayFabEvents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Authentication/PlayFabEvents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Client.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Client/PlayFabClientAPI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Client/PlayFabClientAPI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Client/PlayFabClientModels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Client/PlayFabClientModels.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Client/PlayFabDeviceUtil.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Client/PlayFabDeviceUtil.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Client/PlayFabEvents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Client/PlayFabEvents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Client/PlayFabIdfa.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Client/PlayFabIdfa.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Client/PlayFabSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Client/PlayFabSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/CloudScript.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/CloudScript/PlayFabCloudScriptAPI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/CloudScript/PlayFabCloudScriptAPI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/CloudScript/PlayFabCloudScriptModels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/CloudScript/PlayFabCloudScriptModels.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/CloudScript/PlayFabEvents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/CloudScript/PlayFabEvents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Data/PlayFabDataAPI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Data/PlayFabDataAPI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Data/PlayFabDataModels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Data/PlayFabDataModels.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Data/PlayFabEvents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Data/PlayFabEvents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Entity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Entity/ScreenTimeTracker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Entity/ScreenTimeTracker.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Events.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Events/PlayFabEvents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Events/PlayFabEvents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Events/PlayFabEventsAPI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Events/PlayFabEventsAPI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Events/PlayFabEventsModels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Events/PlayFabEventsModels.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Groups.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Groups/PlayFabEvents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Groups/PlayFabEvents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Groups/PlayFabGroupsAPI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Groups/PlayFabGroupsAPI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Groups/PlayFabGroupsModels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Groups/PlayFabGroupsModels.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Localization.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Localization/PlayFabEvents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Localization/PlayFabEvents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Localization/PlayFabLocalizationAPI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Localization/PlayFabLocalizationAPI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Localization/PlayFabLocalizationModels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Localization/PlayFabLocalizationModels.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Matchmaker.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Matchmaker/PlayFabEvents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Matchmaker/PlayFabEvents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Matchmaker/PlayFabMatchmakerAPI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Matchmaker/PlayFabMatchmakerAPI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Matchmaker/PlayFabMatchmakerModels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Matchmaker/PlayFabMatchmakerModels.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Profiles.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Profiles/PlayFabEvents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Profiles/PlayFabEvents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Profiles/PlayFabProfilesAPI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Profiles/PlayFabProfilesAPI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Profiles/PlayFabProfilesModels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Profiles/PlayFabProfilesModels.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Server.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Server/PlayFabEvents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Server/PlayFabEvents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Server/PlayFabServerAPI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Server/PlayFabServerAPI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Server/PlayFabServerModels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Server/PlayFabServerModels.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Server/PlayFabSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Server/PlayFabSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Server/PlayStream.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Server/PlayStream/PlayFabPlayStreamAPI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Server/PlayStream/PlayFabPlayStreamAPI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Server/PlayStream/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Server/PlayStream/README.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Editor/PlayFabHelp.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Editor/PlayFabHelp.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Editor/PlayFablogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Editor/PlayFablogo.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/ISerializer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/ISerializer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/Log.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/Log.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabErrors.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabErrors.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabHttp.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabHttp/IPlayFabHttp.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabHttp/IPlayFabHttp.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabHttp/PlayFabHTTP.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabHttp/PlayFabHTTP.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabHttp/PlayFabUnityHttp.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabHttp/PlayFabUnityHttp.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabHttp/PlayFabWWW.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabHttp/PlayFabWWW.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabHttp/PlayFabWebRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabHttp/PlayFabWebRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabSignalR.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabSignalR/IPlayFabSignalR.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabSignalR/IPlayFabSignalR.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabSignalR/PlayFabSignalR.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabSignalR/PlayFabSignalR.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/SimpleJson.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/SimpleJson.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/SingletonMonoBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/SingletonMonoBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/Util.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/Util.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/wsaReflectionExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/wsaReflectionExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/CRC32.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/CRC32.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/Deflate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/Deflate.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/DeflateStream.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/DeflateStream.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/GZipStream.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/GZipStream.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/InfTree.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/InfTree.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/Inflate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/Inflate.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/ParallelDeflateOutputStream.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/ParallelDeflateOutputStream.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/ZTree.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/ZTree.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/Zlib.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/Zlib.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/ZlibBaseStream.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/ZlibBaseStream.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/ZlibCodec.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/ZlibCodec.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/ZlibConstants.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/ZlibConstants.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/ZlibStream.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Ionic.Zlib/ZlibStream.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Models/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Models/Editor/MakeSharedSettingsObj.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Models/Editor/MakeSharedSettingsObj.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Models/PlayFabSharedSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Models/PlayFabSharedSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Models/SharedModels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Models/SharedModels.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/IPlayFabPlugin.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/IPlayFabPlugin.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/IPlayFabTransportPlugin.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/IPlayFabTransportPlugin.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/ISerializerPlugin.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/ISerializerPlugin.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/ITransportPlugin.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/ITransportPlugin.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/PlayFabDataGatherer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/PlayFabDataGatherer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/PlayFabEvents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/PlayFabEvents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/PlayFabLogger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/PlayFabLogger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/PlayFabSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/PlayFabSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/PlayStream.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/PlayStream/PlayStreamEventDataModels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/PlayStream/PlayStreamEventDataModels.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/PluginContract.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/PluginContract.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/PluginManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/PluginManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/Resources/PlayFabSharedSettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Public/Resources/PlayFabSharedSettings.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Connection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Connection.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/ConnectionExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/ConnectionExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/DisposableAction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/DisposableAction.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/CallbackDetail.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/CallbackDetail.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/DefaultHttpClient.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/DefaultHttpClient.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/HttpHelper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/HttpHelper.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/HttpWebRequestWrapper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/HttpWebRequestWrapper.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/HttpWebResponseWrapper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/HttpWebResponseWrapper.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/IHttpClient.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/IHttpClient.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/IHttpClientExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/IHttpClientExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/IRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/IRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/IResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/IResponse.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/RequestState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Http/RequestState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/HubConnection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/HubConnection.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/HubInvocation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/HubInvocation.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/HubMethodAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/HubMethodAttribute.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/HubProxy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/HubProxy.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/HubRegistrationData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/HubRegistrationData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/HubResult.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/HubResult.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/Hubservable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/Hubservable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/IHubProxy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/IHubProxy.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/IObservable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/IObservable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/IObserver.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/IObserver.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/ProxyExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/ProxyExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/Subscription.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Hubs/Subscription.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/IConnection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/IConnection.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Infrastructure.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Infrastructure/ChunkBuffer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Infrastructure/ChunkBuffer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Infrastructure/DisposableAction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Infrastructure/DisposableAction.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Infrastructure/StreamExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Infrastructure/StreamExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Infrastructure/StreamState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Infrastructure/StreamState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Infrastructure/UriQueryUtility.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Infrastructure/UriQueryUtility.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/LICENSE.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/NegotiationResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/NegotiationResponse.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/README.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/AsyncStreamReader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/AsyncStreamReader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/AutoTransport.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/AutoTransport.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/CancellationTokenSource.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/CancellationTokenSource.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/CustomEventArgs.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/CustomEventArgs.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/EventSignal.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/EventSignal.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/HttpBasedTransport.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/HttpBasedTransport.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/IClientTransport.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/IClientTransport.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/LongPollingTransport.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/LongPollingTransport.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/OptionalEventSignal.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/OptionalEventSignal.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/ServerSentEventsTransport.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/ServerSentEventsTransport.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/SseEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/Shared/SignalR.NET20/Transports/SseEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFabSdk/link.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MathScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MathScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MemoryScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MemoryScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MathBoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MathBoard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MemoryBoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MemoryBoard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayFabLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayFabLogin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameAsset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameAsset.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SightBoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SightBoard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resume.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tizbin.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tizbin_unity.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Tizbin_unity.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tizbin_unity.userprefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SplashScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SplashScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -483,35 +29,145 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameModes.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/SightBoard.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            <state relative-caret-position="158">
+              <caret line="259" column="48" selection-start-line="259" selection-start-column="48" selection-end-line="259" selection-end-column="48" />
               <folding>
-                <marker date="1553957886964" expanded="true" signature="36:83" ph="{...}" />
-                <marker date="1553957886964" expanded="true" signature="106:144" ph="{...}" />
+                <marker date="1577476976439" expanded="false" signature="6:143" ph="..." />
+                <marker date="1577476976439" expanded="true" signature="184:12403" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="1600:3109" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="1901:2088" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="2329:2517" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="3127:3241" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="3294:4571" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="3717:3783" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="3841:4002" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="4060:4220" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="4610:5649" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="4635:4881" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="4715:4871" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="5032:5642" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="5677:8162" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="7149:7554" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="7685:8118" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="8191:9302" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="8997:9296" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="9218:9284" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="9334:9385" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="9443:9476" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="9498:9900" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="9585:9894" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="9759:9884" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="9938:10195" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="9984:10098" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="10201:10337" ph="/// cond == 0 is succeed, 1 is wrong select, 2 is time out ... " />
+                <marker date="1577476976439" expanded="true" signature="10396:11350" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="10456:10799" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="10812:11344" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="11386:11894" ph="{...}" />
+                <marker date="1577476976439" expanded="true" signature="11941:12401" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameAsset.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <marker date="1577478690314" expanded="true" signature="82:342" ph="{...}" />
+                <marker date="1577478690314" expanded="true" signature="199:340" ph="{...}" />
+                <marker date="1577478690314" expanded="true" signature="206:334" ph="/* var obj = AssetDatabase.LoadMainAssetAtPath(&quot;Assets/Prefabs/GameAsset.asset&quot;); ... */" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Server/AlbumeModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="83" column="45" selection-start-line="83" selection-start-column="44" selection-end-line="83" selection-end-column="45" />
+            <state relative-caret-position="150">
+              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
               <folding>
-                <marker date="1553957796800" expanded="false" signature="6:119" ph="..." />
-                <marker date="1553957796800" expanded="true" signature="158:2654" ph="{...}" />
-                <marker date="1553957796800" expanded="true" signature="352:1122" ph="{...}" />
-                <marker date="1553957796800" expanded="true" signature="413:669" ph="{...}" />
-                <marker date="1553957796800" expanded="true" signature="776:827" ph="{...}" />
-                <marker date="1553957796800" expanded="true" signature="885:1116" ph="{...}" />
-                <marker date="1553957796800" expanded="true" signature="1180:1192" ph="{...}" />
-                <marker date="1553957796800" expanded="true" signature="1230:1529" ph="{...}" />
-                <marker date="1553957796800" expanded="true" signature="1571:2652" ph="{...}" />
-                <marker date="1553957796800" expanded="true" signature="1613:2220" ph="{...}" />
-                <marker date="1553957796800" expanded="true" signature="1636:2209" ph="/* PlayFab.ClientModels.UpdateUserDataRequest request = new PlayFab.ClientModels.UpdateUserDataRequest (); ... */" />
+                <marker date="1577475980938" expanded="true" signature="6:73" ph="..." />
+                <marker date="1577475980938" expanded="true" signature="101:443" ph="{...}" />
+                <marker date="1577475980938" expanded="true" signature="132:296" ph="{...}" />
+                <marker date="1577475980938" expanded="true" signature="325:441" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Server/GetAllPictureIdsModel.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+              <folding>
+                <marker date="1575044973343" expanded="true" signature="71:119" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/SplashScene.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <marker date="1575314524995" expanded="true" signature="6:134" ph="..." />
+                <marker date="1575314524995" expanded="true" signature="176:2582" ph="{...}" />
+                <marker date="1575314524995" expanded="true" signature="383:622" ph="{...}" />
+                <marker date="1575314524995" expanded="true" signature="435:615" ph="/* GameAnalytics.Instance.ConfigureBuild(&quot;1.0&quot;); ... */" />
+                <marker date="1575314524995" expanded="true" signature="670:1655" ph="{...}" />
+                <marker date="1575314524995" expanded="true" signature="772:1172" ph="/* GameAnalytics.Instance.AddDesignEvent(&quot;app_start&quot;); ... */" />
+                <marker date="1575314524995" expanded="true" signature="1230:1531" ph="/* if (GameSaveData.Instance.IsFirstRun()) ... */" />
+                <marker date="1575314524995" expanded="true" signature="1657:1758" ph="/* private static void HandleNotificationOpened(OSNotificationOpenedResult result) ... */" />
+                <marker date="1575314524995" expanded="true" signature="1814:1821" ph="{...}" />
+                <marker date="1575314524995" expanded="true" signature="1839:2171" ph="{...}" />
+                <marker date="1575314524995" expanded="true" signature="1843:1989" ph="/* GameAnalytics.Instance.AddDesignEvent(&quot;loading_main_menu&quot;); ... */" />
+                <marker date="1575314524995" expanded="true" signature="2016:2111" ph="{...}" />
+                <marker date="1575314524995" expanded="true" signature="2225:2555" ph="{...}" />
+                <marker date="1575314524995" expanded="true" signature="2229:2552" ph="/* if (TaplighInterface.Instance.IsInitializeDone() &amp;&amp; !_loadAdStarted) ... */" />
+                <marker date="1575314524995" expanded="true" signature="2574:2580" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Server/Server.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+              <folding>
+                <marker date="1577476656033" expanded="false" signature="6:92" ph="..." />
+                <marker date="1577476656033" expanded="true" signature="121:1904" ph="{...}" />
+                <marker date="1577476656033" expanded="true" signature="147:1902" ph="{...}" />
+                <marker date="1577476656033" expanded="true" signature="357:420" ph="{...}" />
+                <marker date="1577476656033" expanded="true" signature="460:654" ph="{...}" />
+                <marker date="1577476656033" expanded="true" signature="569:644" ph="{...}" />
+                <marker date="1577476656033" expanded="true" signature="705:1896" ph="{...}" />
+                <marker date="1577476656033" expanded="true" signature="1364:1597" ph="{...}" />
+                <marker date="1577476656033" expanded="true" signature="1650:1886" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Server/ServerData.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+              <folding>
+                <marker date="1577475981072" expanded="true" signature="6:39" ph="..." />
+                <marker date="1577475981072" expanded="true" signature="68:244" ph="{...}" />
+                <marker date="1577475981072" expanded="true" signature="98:241" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -520,8 +176,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/MemoryBoard.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-270">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="142">
+              <caret line="257" column="15" selection-start-line="257" selection-start-column="15" selection-end-line="257" selection-end-column="15" />
               <folding>
                 <marker date="1561467590605" expanded="false" signature="6:119" ph="..." />
                 <marker date="1561467590605" expanded="true" signature="161:13931" ph="{...}" />
@@ -575,145 +231,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/FailPage.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding>
-                <marker date="1539674385498" expanded="false" signature="6:66" ph="..." />
-                <marker date="1539674385498" expanded="true" signature="106:1653" ph="{...}" />
-                <marker date="1539674385498" expanded="true" signature="420:1589" ph="{...}" />
-                <marker date="1539674385498" expanded="true" signature="541:710" ph="{...}" />
-                <marker date="1539674385498" expanded="true" signature="824:990" ph="{...}" />
-                <marker date="1539674385498" expanded="true" signature="1104:1270" ph="{...}" />
-                <marker date="1539674385498" expanded="true" signature="1314:1391" ph="{...}" />
-                <marker date="1539674385498" expanded="true" signature="1435:1511" ph="{...}" />
-                <marker date="1539674385498" expanded="true" signature="1557:1584" ph="{...}" />
-                <marker date="1539674385498" expanded="true" signature="1643:1651" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/SplashScene.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <marker date="1537410546161" expanded="false" signature="6:94" ph="..." />
-                <marker date="1537410546161" expanded="true" signature="137:2543" ph="{...}" />
-                <marker date="1537410546161" expanded="true" signature="344:583" ph="{...}" />
-                <marker date="1537410546161" expanded="true" signature="396:576" ph="/* GameAnalytics.Instance.ConfigureBuild(&quot;1.0&quot;); ... */" />
-                <marker date="1537410546161" expanded="true" signature="631:1616" ph="{...}" />
-                <marker date="1537410546161" expanded="true" signature="733:1133" ph="/* GameAnalytics.Instance.AddDesignEvent(&quot;app_start&quot;); ... */" />
-                <marker date="1537410546161" expanded="true" signature="1191:1492" ph="/* if (GameSaveData.Instance.IsFirstRun()) ... */" />
-                <marker date="1537410546161" expanded="true" signature="1618:1719" ph="/* private static void HandleNotificationOpened(OSNotificationOpenedResult result) ... */" />
-                <marker date="1537410546161" expanded="true" signature="1775:1782" ph="{...}" />
-                <marker date="1537410546161" expanded="true" signature="1800:2132" ph="{...}" />
-                <marker date="1537410546161" expanded="true" signature="1804:1950" ph="/* GameAnalytics.Instance.AddDesignEvent(&quot;loading_main_menu&quot;); ... */" />
-                <marker date="1537410546161" expanded="true" signature="1977:2072" ph="{...}" />
-                <marker date="1537410546161" expanded="true" signature="2186:2516" ph="{...}" />
-                <marker date="1537410546161" expanded="true" signature="2190:2513" ph="/* if (TaplighInterface.Instance.IsInitializeDone() &amp;&amp; !_loadAdStarted) ... */" />
-                <marker date="1537410546161" expanded="true" signature="2535:2541" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/SightBoard.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-90">
-              <caret line="199" column="4" lean-forward="true" selection-start-line="199" selection-start-column="4" selection-end-line="199" selection-end-column="4" />
-              <folding>
-                <marker date="1561468569058" expanded="false" signature="6:119" ph="..." />
-                <marker date="1561468569058" expanded="true" signature="160:12612" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="1574:3079" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="1871:2058" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="2299:2487" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="3097:3211" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="3264:4439" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="3679:3745" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="3803:3964" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="4022:4182" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="4478:5517" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="4503:4749" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="4583:4739" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="4900:5510" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="5545:8363" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="7099:7689" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="7729:8319" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="8392:9499" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="9194:9493" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="9415:9481" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="9531:9594" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="9652:9685" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="9707:10109" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="9794:10103" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="9968:10093" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="10147:10404" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="10193:10307" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="10410:10546" ph="/// cond == 0 is succeed, 1 is wrong select, 2 is time out ... " />
-                <marker date="1561468569058" expanded="true" signature="10605:11559" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="10665:11008" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="11021:11553" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="11595:12103" ph="{...}" />
-                <marker date="1561468569058" expanded="true" signature="12150:12610" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/MathBoard.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="190" selection-start-line="190" selection-end-line="190" />
-              <folding>
-                <marker date="1561537798546" expanded="false" signature="6:138" ph="..." />
-                <marker date="1561537798546" expanded="true" signature="179:6559" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="1008:2175" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="1075:1187" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="1250:1363" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="1424:1537" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="1774:1871" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="1929:2019" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="2077:2167" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="2225:4765" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="2365:2533" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="2568:2784" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="3859:4442" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="4462:4668" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="4795:5628" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="5020:5156" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="5577:5621" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="5687:5699" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="5727:6460" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="5870:6191" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="6098:6181" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="6204:6454" ph="{...}" />
-                <marker date="1561537798546" expanded="true" signature="6493:6556" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayFabLogin.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-              <folding>
-                <marker date="1574437098116" expanded="true" signature="6:44" ph="..." />
-                <marker date="1574437098116" expanded="true" signature="87:894" ph="{...}" />
-                <marker date="1574437098116" expanded="true" signature="91:892" ph="/* Use this for initialization ... */" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConfirmScreen.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="915">
@@ -736,42 +253,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameAsset.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding>
-                <marker date="1561383739415" expanded="false" signature="6:37" ph="..." />
-                <marker date="1561383739415" expanded="true" signature="80:334" ph="{...}" />
-                <marker date="1561383739415" expanded="true" signature="195:332" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>rotate</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConfirmScreen.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MemoryBoard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SightBoard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameAsset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MathBoard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameModes.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FailPage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/StageGenerator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayFabLogin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Server/ServerData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Server/Server.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MemoryBoard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameAsset.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FailPage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Server/GetAllPictureIdsModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayFabLogin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Server/AlbumeModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SplashScene.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayFabLogin.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AlbumeModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ServerData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Server/AlbumeModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Server/ServerData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Server/GetAllPictureIdsModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Server/GetAlbumeModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SplashScene.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Server/Server.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SightBoard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameAsset.cs" />
       </list>
     </option>
   </component>
@@ -794,15 +316,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
-      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -833,10 +369,10 @@
       <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="8772">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="8772" />
       <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
@@ -852,12 +388,13 @@
       <option name="presentableId" value="Default" />
       <updated>1574436567757</updated>
       <workItem from="1574436582529" duration="4088000" />
-      <workItem from="1575021964475" duration="562000" />
+      <workItem from="1575021964475" duration="17974000" />
+      <workItem from="1577467723182" duration="7569000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4650000" />
+    <option name="totallyTimeSpent" value="29631000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -869,10 +406,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20861678" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21164021" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -936,9 +472,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="83" column="45" selection-start-line="83" selection-start-column="44" selection-end-line="83" selection-end-column="45" />
+          <folding>
+            <marker date="1553957796800" expanded="false" signature="6:119" ph="..." />
+            <marker date="1553957796800" expanded="true" signature="158:2654" ph="{...}" />
+            <marker date="1553957796800" expanded="true" signature="352:1122" ph="{...}" />
+            <marker date="1553957796800" expanded="true" signature="413:669" ph="{...}" />
+            <marker date="1553957796800" expanded="true" signature="776:827" ph="{...}" />
+            <marker date="1553957796800" expanded="true" signature="885:1116" ph="{...}" />
+            <marker date="1553957796800" expanded="true" signature="1180:1192" ph="{...}" />
+            <marker date="1553957796800" expanded="true" signature="1230:1529" ph="{...}" />
+            <marker date="1553957796800" expanded="true" signature="1571:2652" ph="{...}" />
+            <marker date="1553957796800" expanded="true" signature="1613:2220" ph="{...}" />
+            <marker date="1553957796800" expanded="true" signature="1636:2209" ph="/* PlayFab.ClientModels.UpdateUserDataRequest request = new PlayFab.ClientModels.UpdateUserDataRequest (); ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameModes.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="150">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding>
             <marker date="1553957886964" expanded="true" signature="36:83" ph="{...}" />
@@ -962,30 +518,6 @@
             <marker date="1539674385498" expanded="true" signature="1435:1511" ph="{...}" />
             <marker date="1539674385498" expanded="true" signature="1557:1584" ph="{...}" />
             <marker date="1539674385498" expanded="true" signature="1643:1651" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SplashScene.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <marker date="1537410546161" expanded="false" signature="6:94" ph="..." />
-            <marker date="1537410546161" expanded="true" signature="137:2543" ph="{...}" />
-            <marker date="1537410546161" expanded="true" signature="344:583" ph="{...}" />
-            <marker date="1537410546161" expanded="true" signature="396:576" ph="/* GameAnalytics.Instance.ConfigureBuild(&quot;1.0&quot;); ... */" />
-            <marker date="1537410546161" expanded="true" signature="631:1616" ph="{...}" />
-            <marker date="1537410546161" expanded="true" signature="733:1133" ph="/* GameAnalytics.Instance.AddDesignEvent(&quot;app_start&quot;); ... */" />
-            <marker date="1537410546161" expanded="true" signature="1191:1492" ph="/* if (GameSaveData.Instance.IsFirstRun()) ... */" />
-            <marker date="1537410546161" expanded="true" signature="1618:1719" ph="/* private static void HandleNotificationOpened(OSNotificationOpenedResult result) ... */" />
-            <marker date="1537410546161" expanded="true" signature="1775:1782" ph="{...}" />
-            <marker date="1537410546161" expanded="true" signature="1800:2132" ph="{...}" />
-            <marker date="1537410546161" expanded="true" signature="1804:1950" ph="/* GameAnalytics.Instance.AddDesignEvent(&quot;loading_main_menu&quot;); ... */" />
-            <marker date="1537410546161" expanded="true" signature="1977:2072" ph="{...}" />
-            <marker date="1537410546161" expanded="true" signature="2186:2516" ph="{...}" />
-            <marker date="1537410546161" expanded="true" signature="2190:2513" ph="/* if (TaplighInterface.Instance.IsInitializeDone() &amp;&amp; !_loadAdStarted) ... */" />
-            <marker date="1537410546161" expanded="true" signature="2535:2541" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1023,42 +555,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameAsset.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding>
-            <marker date="1561383739415" expanded="false" signature="6:37" ph="..." />
-            <marker date="1561383739415" expanded="true" signature="80:334" ph="{...}" />
-            <marker date="1561383739415" expanded="true" signature="195:332" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="83" column="45" selection-start-line="83" selection-start-column="44" selection-end-line="83" selection-end-column="45" />
-          <folding>
-            <marker date="1553957796800" expanded="false" signature="6:119" ph="..." />
-            <marker date="1553957796800" expanded="true" signature="158:2654" ph="{...}" />
-            <marker date="1553957796800" expanded="true" signature="352:1122" ph="{...}" />
-            <marker date="1553957796800" expanded="true" signature="413:669" ph="{...}" />
-            <marker date="1553957796800" expanded="true" signature="776:827" ph="{...}" />
-            <marker date="1553957796800" expanded="true" signature="885:1116" ph="{...}" />
-            <marker date="1553957796800" expanded="true" signature="1180:1192" ph="{...}" />
-            <marker date="1553957796800" expanded="true" signature="1230:1529" ph="{...}" />
-            <marker date="1553957796800" expanded="true" signature="1571:2652" ph="{...}" />
-            <marker date="1553957796800" expanded="true" signature="1613:2220" ph="{...}" />
-            <marker date="1553957796800" expanded="true" signature="1636:2209" ph="/* PlayFab.ClientModels.UpdateUserDataRequest request = new PlayFab.ClientModels.UpdateUserDataRequest (); ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/MemoryBoard.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="142">
+          <caret line="257" column="15" selection-start-line="257" selection-start-column="15" selection-end-line="257" selection-end-column="15" />
           <folding>
             <marker date="1561467590605" expanded="false" signature="6:119" ph="..." />
             <marker date="1561467590605" expanded="true" signature="161:13931" ph="{...}" />
@@ -1110,10 +610,117 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SplashScene.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <marker date="1575314524995" expanded="true" signature="6:134" ph="..." />
+            <marker date="1575314524995" expanded="true" signature="176:2582" ph="{...}" />
+            <marker date="1575314524995" expanded="true" signature="383:622" ph="{...}" />
+            <marker date="1575314524995" expanded="true" signature="435:615" ph="/* GameAnalytics.Instance.ConfigureBuild(&quot;1.0&quot;); ... */" />
+            <marker date="1575314524995" expanded="true" signature="670:1655" ph="{...}" />
+            <marker date="1575314524995" expanded="true" signature="772:1172" ph="/* GameAnalytics.Instance.AddDesignEvent(&quot;app_start&quot;); ... */" />
+            <marker date="1575314524995" expanded="true" signature="1230:1531" ph="/* if (GameSaveData.Instance.IsFirstRun()) ... */" />
+            <marker date="1575314524995" expanded="true" signature="1657:1758" ph="/* private static void HandleNotificationOpened(OSNotificationOpenedResult result) ... */" />
+            <marker date="1575314524995" expanded="true" signature="1814:1821" ph="{...}" />
+            <marker date="1575314524995" expanded="true" signature="1839:2171" ph="{...}" />
+            <marker date="1575314524995" expanded="true" signature="1843:1989" ph="/* GameAnalytics.Instance.AddDesignEvent(&quot;loading_main_menu&quot;); ... */" />
+            <marker date="1575314524995" expanded="true" signature="2016:2111" ph="{...}" />
+            <marker date="1575314524995" expanded="true" signature="2225:2555" ph="{...}" />
+            <marker date="1575314524995" expanded="true" signature="2229:2552" ph="/* if (TaplighInterface.Instance.IsInitializeDone() &amp;&amp; !_loadAdStarted) ... */" />
+            <marker date="1575314524995" expanded="true" signature="2574:2580" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Server/GetAllPictureIdsModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <marker date="1575044973343" expanded="true" signature="71:119" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Server/AlbumeModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding>
+            <marker date="1577475980938" expanded="true" signature="6:73" ph="..." />
+            <marker date="1577475980938" expanded="true" signature="101:443" ph="{...}" />
+            <marker date="1577475980938" expanded="true" signature="132:296" ph="{...}" />
+            <marker date="1577475980938" expanded="true" signature="325:441" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Server/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+          <folding>
+            <marker date="1577476656033" expanded="false" signature="6:92" ph="..." />
+            <marker date="1577476656033" expanded="true" signature="121:1904" ph="{...}" />
+            <marker date="1577476656033" expanded="true" signature="147:1902" ph="{...}" />
+            <marker date="1577476656033" expanded="true" signature="357:420" ph="{...}" />
+            <marker date="1577476656033" expanded="true" signature="460:654" ph="{...}" />
+            <marker date="1577476656033" expanded="true" signature="569:644" ph="{...}" />
+            <marker date="1577476656033" expanded="true" signature="705:1896" ph="{...}" />
+            <marker date="1577476656033" expanded="true" signature="1364:1597" ph="{...}" />
+            <marker date="1577476656033" expanded="true" signature="1650:1886" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SightBoard.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="259" column="48" selection-start-line="259" selection-start-column="48" selection-end-line="259" selection-end-column="48" />
+          <folding>
+            <marker date="1577476976439" expanded="false" signature="6:143" ph="..." />
+            <marker date="1577476976439" expanded="true" signature="184:12403" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="1600:3109" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="1901:2088" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="2329:2517" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="3127:3241" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="3294:4571" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="3717:3783" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="3841:4002" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="4060:4220" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="4610:5649" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="4635:4881" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="4715:4871" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="5032:5642" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="5677:8162" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="7149:7554" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="7685:8118" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="8191:9302" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="8997:9296" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="9218:9284" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="9334:9385" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="9443:9476" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="9498:9900" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="9585:9894" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="9759:9884" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="9938:10195" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="9984:10098" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="10201:10337" ph="/// cond == 0 is succeed, 1 is wrong select, 2 is time out ... " />
+            <marker date="1577476976439" expanded="true" signature="10396:11350" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="10456:10799" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="10812:11344" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="11386:11894" ph="{...}" />
+            <marker date="1577476976439" expanded="true" signature="11941:12401" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/MathBoard.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="190" selection-start-line="190" selection-end-line="190" />
+        <state relative-caret-position="165">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
           <folding>
             <marker date="1561537798546" expanded="false" signature="6:138" ph="..." />
             <marker date="1561537798546" expanded="true" signature="179:6559" ph="{...}" />
@@ -1142,44 +749,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SightBoard.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Server/ServerData.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="199" column="4" lean-forward="true" selection-start-line="199" selection-start-column="4" selection-end-line="199" selection-end-column="4" />
+        <state relative-caret-position="120">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
           <folding>
-            <marker date="1561468569058" expanded="false" signature="6:119" ph="..." />
-            <marker date="1561468569058" expanded="true" signature="160:12612" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="1574:3079" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="1871:2058" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="2299:2487" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="3097:3211" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="3264:4439" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="3679:3745" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="3803:3964" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="4022:4182" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="4478:5517" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="4503:4749" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="4583:4739" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="4900:5510" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="5545:8363" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="7099:7689" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="7729:8319" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="8392:9499" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="9194:9493" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="9415:9481" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="9531:9594" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="9652:9685" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="9707:10109" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="9794:10103" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="9968:10093" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="10147:10404" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="10193:10307" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="10410:10546" ph="/// cond == 0 is succeed, 1 is wrong select, 2 is time out ... " />
-            <marker date="1561468569058" expanded="true" signature="10605:11559" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="10665:11008" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="11021:11553" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="11595:12103" ph="{...}" />
-            <marker date="1561468569058" expanded="true" signature="12150:12610" ph="{...}" />
+            <marker date="1577475981072" expanded="true" signature="6:39" ph="..." />
+            <marker date="1577475981072" expanded="true" signature="68:244" ph="{...}" />
+            <marker date="1577475981072" expanded="true" signature="98:241" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameAsset.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <marker date="1577478690314" expanded="true" signature="82:342" ph="{...}" />
+            <marker date="1577478690314" expanded="true" signature="199:340" ph="{...}" />
+            <marker date="1577478690314" expanded="true" signature="206:334" ph="/* var obj = AssetDatabase.LoadMainAssetAtPath(&quot;Assets/Prefabs/GameAsset.asset&quot;); ... */" />
           </folding>
         </state>
       </provider>

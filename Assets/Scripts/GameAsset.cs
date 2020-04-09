@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
-using UnityEditor;
+//using UnityEditor;
 
 public class GameAsset : ScriptableObject
 {
     public Sprite AllIcons = null;
 
-    [MenuItem("Tools/Game Asset")]
+//    [MenuItem("Tools/Game Asset")]
     public static void CreateGameAssets()
     {
-        var obj = AssetDatabase.LoadMainAssetAtPath("Assets/Prefabs/GameAsset.asset");
-        Selection.activeObject = obj;
+//        var obj = AssetDatabase.LoadMainAssetAtPath("Assets/Prefabs/GameAsset.asset");
+//        Selection.activeObject = obj;
     }
 }

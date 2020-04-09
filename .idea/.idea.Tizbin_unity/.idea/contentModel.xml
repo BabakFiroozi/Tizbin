@@ -40,6 +40,12 @@
           <e p="PlayFabLogin.cs" t="Include" />
           <e p="PopupScreen.cs" t="Include" />
           <e p="SceneTransitor.cs" t="Include" />
+          <e p="Server" t="Include">
+            <e p="AlbumeModel.cs" t="Include" />
+            <e p="GetAllPictureIdsModel.cs" t="Include" />
+            <e p="Server.cs" t="Include" />
+            <e p="ServerData.cs" t="Include" />
+          </e>
           <e p="SightBoard.cs" t="Include" />
           <e p="SplashScene.cs" t="Include" />
           <e p="StoreNames.cs" t="Include" />

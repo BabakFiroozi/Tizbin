@@ -83,6 +83,10 @@
     <Compile Include="Assets\Scripts\PlayFabLogin.cs" />
     <Compile Include="Assets\Scripts\PopupScreen.cs" />
     <Compile Include="Assets\Scripts\SceneTransitor.cs" />
+    <Compile Include="Assets\Scripts\Server\AlbumeModel.cs" />
+    <Compile Include="Assets\Scripts\Server\GetAllPictureIdsModel.cs" />
+    <Compile Include="Assets\Scripts\Server\Server.cs" />
+    <Compile Include="Assets\Scripts\Server\ServerData.cs" />
     <Compile Include="Assets\Scripts\SightBoard.cs" />
     <Compile Include="Assets\Scripts\SplashScene.cs" />
     <Compile Include="Assets\Scripts\StoreNames.cs" />

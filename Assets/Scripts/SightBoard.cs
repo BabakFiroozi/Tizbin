@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using DG.Tweening;
+using SightGame.Server;
 
 public class SightBoard : MonoBehaviour
 {
@@ -50,7 +51,7 @@ public class SightBoard : MonoBehaviour
 
     Coroutine _hintRoutine = null;
 
-    int _gameMode = 0;
+    int _difficulty = 0;
 
 
 
@@ -61,9 +62,9 @@ public class SightBoard : MonoBehaviour
         _hintButton.interactable = false;
 
         int eliminate = 2;
-        if (_gameMode == 1)
+        if (_difficulty == 1)
             eliminate = 3;
-        if (_gameMode == 2)
+        if (_difficulty == 2)
             eliminate = 4;
 
         List<Image> topList = new List<Image>();
@@ -124,13 +125,13 @@ public class SightBoard : MonoBehaviour
     void Start()
     {
         if (DataCarrier.Instance.GameMode == GameModes.Easy)
-            _gameMode = 0;
+            _difficulty = 0;
         if (DataCarrier.Instance.GameMode == GameModes.Normal)
-            _gameMode = 1;
+            _difficulty = 1;
         if (DataCarrier.Instance.GameMode == GameModes.Hard)
-            _gameMode = 2;
+            _difficulty = 2;
 
-        _hitDuratin = _hitDuratinaArr[_gameMode];
+        _hitDuratin = _hitDuratinaArr[_difficulty];
 
         _succeedSign.DOFade(0, 0);
 
@@ -153,6 +154,10 @@ public class SightBoard : MonoBehaviour
             _hitTimer = 0;
             SceneTransitor.Instance.TransitScene(DataCarrier.SCENE_MAIN_MENU);
         });
+        
+        
+        Server.Instance.Init();
+        Server.Instance.SetAllPictureIds();
 
         GenerateAlbume();
 
@@ -203,7 +208,7 @@ public class SightBoard : MonoBehaviour
         if (_bottAlbume != null)
             Destroy(_bottAlbume.gameObject);
 
-        var allbumeObj = _albumeObjects[_gameMode];
+        var allbumeObj = _albumeObjects[_difficulty];
 
         _topAlbume = Instantiate(allbumeObj, transform).GetComponent<RectTransform>();
         _topAlbume.anchoredPosition = new Vector2(700, 310);
@@ -212,14 +217,11 @@ public class SightBoard : MonoBehaviour
         _bottAlbume.anchoredPosition = new Vector2(-700, -175);
 
         _commonPics.Clear();
+        
+        
+        Server.Instance.RequestAlbume(_difficulty + 1);
 
-        List<int> spriteIndicesList = new List<int>();
-        for (int i = 0; i < _allSprites.Length; ++i)
-            spriteIndicesList.Add(i);
-
-        int commonIndex = Rand(0, spriteIndicesList.Count);
-        int spriteIndex = spriteIndicesList[commonIndex];
-        spriteIndicesList.RemoveAt(commonIndex);
+        int commonIndex = Server.Instance.ServerData.albume.commonPicId;
 
         var obj = _topAlbume.GetChild(Rand(0, _topAlbume.childCount)).gameObject;
         obj.GetComponent<Image>().sprite = _allSprites[commonIndex];
@@ -233,38 +235,32 @@ public class SightBoard : MonoBehaviour
         _commonPics.Add(obj);
         obj.transform.SetSiblingIndex(_bottAlbume.childCount - 1);
 
-        foreach (var o in _topAlbume)
+        var topPage =  Server.Instance.ServerData.albume.topPage;
+        for (int i = 0; i < topPage.picIds.Count; ++i)
         {
-            var tr = o as Transform;
+            var tr = _topAlbume.GetChild(i);
             tr.rotation = Quaternion.identity;
             tr.Rotate(0, 0, Rand(0, 360));
 
-            if (_commonPics.Contains(tr.gameObject))
-                continue;
+            int picIndex = topPage.picIds[i];
 
-            int index = Rand(0, spriteIndicesList.Count);
-            spriteIndex = spriteIndicesList[index];
-            spriteIndicesList.RemoveAt(index);
-            tr.GetComponent<Image>().sprite = _allSprites[spriteIndex];
+            tr.GetComponent<Image>().sprite = _allSprites[picIndex];
 
             var buttonObj = tr.gameObject;
             tr.GetComponent<Button>().onClick.AddListener(() => ButtonClick(buttonObj));
         }
 
-        foreach (var o in _bottAlbume)
+        var bottomPage =  Server.Instance.ServerData.albume.bottomPage;
+        for (int i = 0; i < bottomPage.picIds.Count; ++i)
         {
-            var tr = o as Transform;
+            var tr = _bottAlbume.GetChild(i);
             tr.rotation = Quaternion.identity;
             tr.Rotate(0, 0, Rand(0, 360));
 
-            if (_commonPics.Contains(tr.gameObject))
-                continue;
-
-            int index = Rand(0, spriteIndicesList.Count);
-            spriteIndex = spriteIndicesList[index];
-            spriteIndicesList.RemoveAt(index);
-            tr.GetComponent<Image>().sprite = _allSprites[spriteIndex];
-
+            int picIndex = bottomPage.picIds[i];
+            
+            tr.GetComponent<Image>().sprite = _allSprites[picIndex];
+            
             var buttonObj = tr.gameObject;
             tr.GetComponent<Button>().onClick.AddListener(() => ButtonClick(buttonObj));
         }
@@ -291,8 +287,8 @@ public class SightBoard : MonoBehaviour
         _perventTouch.SetActive(false);
 
         _hitDuratin -= .5f;
-        if (_hitDuratin < _hitDuratinaArr[_gameMode] / 3)
-            _hitDuratin = _hitDuratinaArr[_gameMode] / 3;
+        if (_hitDuratin < _hitDuratinaArr[_difficulty] / 3)
+            _hitDuratin = _hitDuratinaArr[_difficulty] / 3;
 
         if (!_tutorialFinished)
             ShowGuidCircles(true);
@@ -310,7 +306,7 @@ public class SightBoard : MonoBehaviour
 
     int Rand(int min, int max)
     {
-        return UnityEngine.Random.Range(min, max);
+        return Random.Range(min, max);
     }
 
     // Update is called once per frame

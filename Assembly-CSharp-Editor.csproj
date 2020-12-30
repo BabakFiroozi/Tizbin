@@ -60,7 +60,6 @@
   <ItemGroup>
      <Compile Include="Assets\Bazaar InAppBilling\Scripts\Editor\StoreHandlerEditor.cs" />
      <Compile Include="Assets\Editor\EditorMenuItems.cs" />
-     <Compile Include="Assets\Editor\StageGenerator.cs" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
@@ -331,6 +330,18 @@
  <Reference Include="SimpleJSON">
  <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/FarsiSaz/SimpleJSON.dll</HintPath>
  </Reference>
+ <Reference Include="BCCrypto">
+ <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/Plugins/GameService/Core/BCCrypto.dll</HintPath>
+ </Reference>
+ <Reference Include="FiroozehGameService">
+ <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/Plugins/GameService/Core/FiroozehGameService.dll</HintPath>
+ </Reference>
+ <Reference Include="GProtocol">
+ <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/Plugins/GameService/Core/GProtocol.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/Plugins/GameService/Core/Newtonsoft.Json.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
@@ -342,18 +353,6 @@
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
- </Reference>
- <Reference Include="FiroozehGameService">
- <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/Plugins/GameService/Core/FiroozehGameService.dll</HintPath>
- </Reference>
- <Reference Include="GProtocol">
- <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/Plugins/GameService/Core/GProtocol.dll</HintPath>
- </Reference>
- <Reference Include="BCCrypto">
- <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/Plugins/GameService/Core/BCCrypto.dll</HintPath>
- </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/Plugins/GameService/Core/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

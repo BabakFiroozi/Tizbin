@@ -86,7 +86,6 @@
      <Compile Include="Assets\Scripts\MemoryBoard.cs" />
      <Compile Include="Assets\Scripts\MyAnalytics.cs" />
      <Compile Include="Assets\Scripts\ParticleOverFix.cs" />
-     <Compile Include="Assets\Scripts\PlayFabLogin.cs" />
      <Compile Include="Assets\Scripts\PopupScreen.cs" />
      <Compile Include="Assets\Scripts\SafeArea.cs" />
      <Compile Include="Assets\Scripts\SceneTransitor.cs" />
@@ -351,6 +350,18 @@
  <Reference Include="SimpleJSON">
  <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/FarsiSaz/SimpleJSON.dll</HintPath>
  </Reference>
+ <Reference Include="BCCrypto">
+ <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/Plugins/GameService/Core/BCCrypto.dll</HintPath>
+ </Reference>
+ <Reference Include="FiroozehGameService">
+ <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/Plugins/GameService/Core/FiroozehGameService.dll</HintPath>
+ </Reference>
+ <Reference Include="GProtocol">
+ <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/Plugins/GameService/Core/GProtocol.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/Plugins/GameService/Core/Newtonsoft.Json.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
@@ -359,18 +370,6 @@
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
  <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="FiroozehGameService">
- <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/Plugins/GameService/Core/FiroozehGameService.dll</HintPath>
- </Reference>
- <Reference Include="GProtocol">
- <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/Plugins/GameService/Core/GProtocol.dll</HintPath>
- </Reference>
- <Reference Include="BCCrypto">
- <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/Plugins/GameService/Core/BCCrypto.dll</HintPath>
- </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>D:/MyJobProjects/Tizbin/Tizbin_unity/Assets/Plugins/GameService/Core/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity2019.4.8f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

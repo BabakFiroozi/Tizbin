@@ -52,18 +52,18 @@ public class SucceedPage : MonoBehaviour
 
         _retryButton.onClick.AddListener(() =>
         {
-            SceneTransitor.Instance.TransitScene(DataCarrier.SCENE_GAME_MEMORY);
+            SceneTransitor.Instance.TransitScene(SceneTransitor.SCENE_GAME_MEMORY);
         });
 
         _nextButton.onClick.AddListener(() =>
         {
-            DataCarrier.Instance.SelectedStage++;
-            SceneTransitor.Instance.TransitScene(DataCarrier.SCENE_GAME_MEMORY);
+            DataHelper.Instance.SelectedStage++;
+            SceneTransitor.Instance.TransitScene(SceneTransitor.SCENE_GAME_MEMORY);
         });
 
         _homeButton.onClick.AddListener(() =>
         {
-            SceneTransitor.Instance.TransitScene(DataCarrier.SCENE_MAIN_MENU);
+            SceneTransitor.Instance.TransitScene(SceneTransitor.SCENE_MAIN_MENU);
         });
 
         if (_leaderboardButton != null)

@@ -11,8 +11,6 @@ public class MemoryBoard : MonoBehaviour
     [SerializeField] Image _rightSelectedSign = null;
     [SerializeField] Image _wrongSelectedSign = null;
 
-    [SerializeField] Sprite[] _allSprites = null;
-
     [SerializeField] RectTransform _gridContent = null;
 
     [SerializeField] GameObject _cellObj = null;
@@ -72,28 +70,28 @@ public class MemoryBoard : MonoBehaviour
         _wrongSelectedSign.DOFade(0, 0);
         _rightSelectedSign.DOFade(0, 0);
 
-        _tutorialFinished = GamePlayerPrefs.Instance.IsTutorialDoneMemory();
+        _tutorialFinished = GameSaveData.IsTutorialDoneMemory();
 
-        if (DataCarrier.Instance.GameMode == GameModes.Easy)
+        if (DataHelper.Instance.GameMode == GameModes.Easy)
         {
             _cellsCount = 12;
             _glimpDuration *= 1;
             _glimpTime = 5;
         }
-        if (DataCarrier.Instance.GameMode == GameModes.Normal)
+        if (DataHelper.Instance.GameMode == GameModes.Normal)
         {
             _cellsCount = 16;
             _glimpDuration *= 2;
             _glimpTime = 7;
         }
-        if (DataCarrier.Instance.GameMode == GameModes.Hard)
+        if (DataHelper.Instance.GameMode == GameModes.Hard)
         {
             _cellsCount = 20;
             _glimpDuration *= 3;
             _glimpTime = 9;
         }
 
-        _gameModeText.text = (DataCarrier.Instance.SelectedStage + 1) + " " + DataCarrier.Instance.GetString(DataCarrier.Instance.GameMode.ToString());
+        _gameModeText.text = (DataHelper.Instance.SelectedStage + 1) + " " + Translator.GetString(DataHelper.Instance.GameMode.ToString());
 
 
         List<int> cellsList = new List<int>();
@@ -130,7 +128,7 @@ public class MemoryBoard : MonoBehaviour
             int cellIndex = memCellsList[i];
             var cellObj = _gridContent.GetChild(cellIndex).gameObject;
             int spriteIndex = spritesList[iterId];
-            cellObj.transform.Find("pic").GetComponent<Image>().sprite = _allSprites[spriteIndex];
+            cellObj.transform.Find("pic").GetComponent<Image>().sprite = GameAsset.Instance.AllSprites[spriteIndex];
 
             cellObj.GetComponent<Button>().onClick.AddListener(() => CellClick(cellObj));
             _cellsNumsDic.Add(cellObj, iterId);
@@ -163,11 +161,11 @@ public class MemoryBoard : MonoBehaviour
         });
         _backButton.onClick.AddListener(() =>
         {
-            SceneTransitor.Instance.TransitScene(DataCarrier.SCENE_MAIN_MENU);
+            SceneTransitor.Instance.TransitScene(SceneTransitor.SCENE_MAIN_MENU);
         });
         _replyButton.onClick.AddListener(() =>
         {
-            SceneTransitor.Instance.TransitScene(DataCarrier.SCENE_GAME_MEMORY);
+            SceneTransitor.Instance.TransitScene(SceneTransitor.SCENE_GAME_MEMORY);
         });
 
         UpdateUiTexts();
@@ -340,8 +338,8 @@ public class MemoryBoard : MonoBehaviour
 
     void UpdateUiTexts()
     {
-        _hintButton.transform.Find("hintText").GetComponent<Text>().text = GamePlayerPrefs.Instance.GetHint().ToString();
-        _helpButton.transform.Find("helpText").GetComponent<Text>().text = GamePlayerPrefs.Instance.GetHelp().ToString();
+        _hintButton.transform.Find("hintText").GetComponent<Text>().text = GameSaveData.GetHint().ToString();
+        _helpButton.transform.Find("helpText").GetComponent<Text>().text = GameSaveData.GetHelp().ToString();
     }
 
     void CellClick(GameObject cellObj)
@@ -368,7 +366,7 @@ public class MemoryBoard : MonoBehaviour
                 if (_tutorialCounter == 6)
                 {
                     _tutorialFinished = true;
-                    GamePlayerPrefs.Instance.DoneTutorialMemory();
+                    GameSaveData.DoneTutorialMemory();
                 }
             }
         }
@@ -419,7 +417,7 @@ public class MemoryBoard : MonoBehaviour
                 if (_tutorialCounter == 6)
                 {
                     _tutorialFinished = true;
-                    GamePlayerPrefs.Instance.DoneTutorialMemory();
+                    GameSaveData.DoneTutorialMemory();
                 }
 
                 //right sound

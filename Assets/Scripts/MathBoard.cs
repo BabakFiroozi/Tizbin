@@ -44,19 +44,19 @@ public class MathBoard : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        if (DataCarrier.Instance.GameMode == GameModes.Easy)
+        if (DataHelper.Instance.GameMode == GameModes.Easy)
         {
             _cellsCount = 9;
             _glimpDuration = 2;
             _selectsCount = 2;
         }
-        if (DataCarrier.Instance.GameMode == GameModes.Normal)
+        if (DataHelper.Instance.GameMode == GameModes.Normal)
         {
             _cellsCount = 16;
             _glimpDuration = 3;
             _selectsCount = 3;
         }
-        if (DataCarrier.Instance.GameMode == GameModes.Hard)
+        if (DataHelper.Instance.GameMode == GameModes.Hard)
         {
             _cellsCount = 25;
             _glimpDuration = 4;
@@ -78,11 +78,11 @@ public class MathBoard : MonoBehaviour
 
         _backButton.onClick.AddListener(() =>
         {
-            SceneTransitor.Instance.TransitScene(DataCarrier.SCENE_MAIN_MENU);
+            SceneTransitor.Instance.TransitScene(SceneTransitor.SCENE_MAIN_MENU);
         });
         _replyButton.onClick.AddListener(() =>
         {
-            SceneTransitor.Instance.TransitScene(DataCarrier.SCENE_GAME_MATH);
+            SceneTransitor.Instance.TransitScene(SceneTransitor.SCENE_GAME_MATH);
         });
     }
 

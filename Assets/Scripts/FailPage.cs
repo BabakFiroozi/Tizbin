@@ -45,10 +45,10 @@ public class FailPage : MonoBehaviour
 		}
 
 		_retryButton.onClick.AddListener (() => {
-			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_GAME_SIGHT);
+			SceneTransitor.Instance.TransitScene (SceneTransitor.SCENE_GAME_SIGHT);
 		});
 		_homeButton.onClick.AddListener (() => {
-			SceneTransitor.Instance.TransitScene (DataCarrier.SCENE_MAIN_MENU);
+			SceneTransitor.Instance.TransitScene (SceneTransitor.SCENE_MAIN_MENU);
 		});
 		_recordButton.onClick.AddListener (() => {
 			//Show leaderboard

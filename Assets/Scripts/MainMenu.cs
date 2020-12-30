@@ -81,13 +81,13 @@ public class MainMenu : MonoBehaviour
 
         }
 
-        DataCarrier.Instance.GameMode = mode;
+        DataHelper.Instance.GameMode = mode;
 
         if (_selectedGame == GameNames.Memory)
-            SceneTransitor.Instance.TransitScene(DataCarrier.SCENE_GAME_MEMORY);
+            SceneTransitor.Instance.TransitScene(SceneTransitor.SCENE_GAME_MEMORY);
         if (_selectedGame == GameNames.Sight)
-            SceneTransitor.Instance.TransitScene(DataCarrier.SCENE_GAME_SIGHT);
+            SceneTransitor.Instance.TransitScene(SceneTransitor.SCENE_GAME_SIGHT);
         if (_selectedGame == GameNames.Math)
-            SceneTransitor.Instance.TransitScene(DataCarrier.SCENE_GAME_MATH);
+            SceneTransitor.Instance.TransitScene(SceneTransitor.SCENE_GAME_MATH);
     }
 }

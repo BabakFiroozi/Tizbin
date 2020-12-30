@@ -1,19 +1,22 @@
 ﻿using System;
 using UnityEngine;
 
-public static class LayerMaskUtil
+namespace Cacao
 {
-	public static int GetLayerMask( int layer )
+	public static class LayerMaskUtil
 	{
-		int layerMask = 1 << layer;
-		return layerMask;
+		public static int GetLayerMask(int layer)
+		{
+			int layerMask = 1 << layer;
+			return layerMask;
+		}
+
+		public static int GetLayerMask(string layerName)
+		{
+			int layer = LayerMask.NameToLayer(layerName);
+			int layerMask = 1 << layer;
+			return layerMask;
+		}
 	}
 
-	public static int GetLayerMask( string layerName )
-	{
-		int layer = LayerMask.NameToLayer(layerName);
-		int layerMask = 1 << layer;
-		return layerMask;
-	}
 }
-

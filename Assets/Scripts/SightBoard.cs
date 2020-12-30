@@ -23,8 +23,6 @@ public class SightBoard : MonoBehaviour
 
     [SerializeField] Image _timerBar = null;
 
-    [SerializeField] Sprite[] _allSprites = null;
-
     [SerializeField] GameObject[] _albumeObjects = null;
 
     RectTransform _topAlbume = null;
@@ -118,17 +116,17 @@ public class SightBoard : MonoBehaviour
     {
         Instance = this;
 
-        _tutorialFinished = GamePlayerPrefs.Instance.IsTutorialDoneSight();
+        _tutorialFinished = GameSaveData.IsTutorialDoneSight();
     }
 
     // Use this for initialization
     void Start()
     {
-        if (DataCarrier.Instance.GameMode == GameModes.Easy)
+        if (DataHelper.Instance.GameMode == GameModes.Easy)
             _difficulty = 0;
-        if (DataCarrier.Instance.GameMode == GameModes.Normal)
+        if (DataHelper.Instance.GameMode == GameModes.Normal)
             _difficulty = 1;
-        if (DataCarrier.Instance.GameMode == GameModes.Hard)
+        if (DataHelper.Instance.GameMode == GameModes.Hard)
             _difficulty = 2;
 
         _hitDuratin = _hitDuratinaArr[_difficulty];
@@ -152,7 +150,7 @@ public class SightBoard : MonoBehaviour
         {
             _perventTouch.SetActive(true);
             _hitTimer = 0;
-            SceneTransitor.Instance.TransitScene(DataCarrier.SCENE_MAIN_MENU);
+            SceneTransitor.Instance.TransitScene(SceneTransitor.SCENE_MAIN_MENU);
         });
         
         
@@ -175,7 +173,7 @@ public class SightBoard : MonoBehaviour
             if (_tutorialCounter > 3)
             {
                 _tutorialFinished = true;
-                GamePlayerPrefs.Instance.DoneTutorialSight();
+                GameSaveData.DoneTutorialSight();
                 return;
             }
         }
@@ -224,13 +222,13 @@ public class SightBoard : MonoBehaviour
         int commonIndex = Server.Instance.ServerData.albume.commonPicId;
 
         var obj = _topAlbume.GetChild(Rand(0, _topAlbume.childCount)).gameObject;
-        obj.GetComponent<Image>().sprite = _allSprites[commonIndex];
+        obj.GetComponent<Image>().sprite = GameAsset.Instance.AllSprites[commonIndex];
         obj.GetComponent<Button>().onClick.AddListener(() => ButtonClick(obj));
         _commonPics.Add(obj);
         obj.transform.SetSiblingIndex(_topAlbume.childCount - 1);
 
         obj = _bottAlbume.GetChild(Rand(0, _bottAlbume.childCount)).gameObject;
-        obj.GetComponent<Image>().sprite = _allSprites[commonIndex];
+        obj.GetComponent<Image>().sprite = GameAsset.Instance.AllSprites[commonIndex];
         obj.GetComponent<Button>().onClick.AddListener(() => ButtonClick(obj));
         _commonPics.Add(obj);
         obj.transform.SetSiblingIndex(_bottAlbume.childCount - 1);
@@ -244,7 +242,7 @@ public class SightBoard : MonoBehaviour
 
             int picIndex = topPage.picIds[i];
 
-            tr.GetComponent<Image>().sprite = _allSprites[picIndex];
+            tr.GetComponent<Image>().sprite = GameAsset.Instance.AllSprites[picIndex];
 
             var buttonObj = tr.gameObject;
             tr.GetComponent<Button>().onClick.AddListener(() => ButtonClick(buttonObj));
@@ -259,7 +257,7 @@ public class SightBoard : MonoBehaviour
 
             int picIndex = bottomPage.picIds[i];
             
-            tr.GetComponent<Image>().sprite = _allSprites[picIndex];
+            tr.GetComponent<Image>().sprite = GameAsset.Instance.AllSprites[picIndex];
             
             var buttonObj = tr.gameObject;
             tr.GetComponent<Button>().onClick.AddListener(() => ButtonClick(buttonObj));

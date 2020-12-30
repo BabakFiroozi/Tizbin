@@ -1,175 +1,208 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.UI;
 using DG.Tweening;
 
-
-
-public class PopupScreen : MonoBehaviour
+namespace Equation
 {
-    [Header("Animation")]
-    [SerializeField] float _animShowTime = 2;
-    [SerializeField] float _animMoveTime = .5f;
-    [SerializeField] Vector2 _animMoveDirection = new Vector2(0, 1);
-    [Space(10)]
-    
 
-
-    [SerializeField] bool _permenant = false;
-    [SerializeField] float _transparency = .7f;
-    [SerializeField] RectTransform _frameRectTr = null;
-    [SerializeField] Button _closeButton = null;
-
-    [SerializeField] Transform _overSbilingIndex = null;
-
-    [SerializeField] bool _logBusy = true;
-
-
-    Vector2 _animOffset;
-
-    Image _backgImage;
-
-    Vector2 _initPos;
-
-    public System.Action ShowEvent { get; set; }
-
-    public System.Action ShowedEvent { get; set; }
-
-    public System.Action ShowFinishedEvent { get; set; }
-
-    bool _hide = false;
-
-    Vector2 _framehidePos;
-
-    public bool IsBusy
+    public enum PopupAnimTypes
     {
-        get; private set;
+        Move,
+        Scale
     }
 
-
-    // Use this for initialization
-    void Start()
+    public class PopupScreen : MonoBehaviour
     {
+        [SerializeField] PopupAnimTypes _animType;
+        [SerializeField] Button _closeButton;
+        [SerializeField] Image _backCloseImage;
+        [SerializeField] RectTransform _frameRectTr;
+        [SerializeField] bool _allowHideWithEsc = true;
+        [SerializeField] bool _moveHor;
+        [SerializeField] int _moveDir = 1;
+        [SerializeField] bool _avtiveWhenHidden = false;
+        [SerializeField] bool _setSibling = true;
 
-        var rect = GetComponent<RectTransform>().rect;
-        _animOffset = _animMoveDirection.normalized * new Vector2(rect.width, rect.height);
+        const float _animTime = .4f;
 
-        _backgImage = GetComponent<Image>();
-        _frameRectTr.gameObject.SetActive(false);
-        _initPos = _frameRectTr.anchoredPosition;
+        [SerializeField] AudioSource _animAudio;
 
-        var closeBackg = _backgImage.gameObject.GetComponent<Button>();
+        static List<PopupScreen> s_popupsList = new List<PopupScreen>();
+        
+        public Action BeforeShowEvent { get; set; }
 
-        if (closeBackg != null)
-            closeBackg.onClick.AddListener(ClosePopup);
-
-        if (_closeButton != null)
-            _closeButton.onClick.AddListener(ClosePopup);
-
-
-        //Hide popup first
-        _backgImage.enabled = false;
-        _framehidePos = _initPos + _animOffset;
-        _frameRectTr.anchoredPosition = _framehidePos;
-
-    }
+        public Action ShowEvent { get; set; }
+        public Action HideEvent { get; set; }
 
 
-    void ClosePopup()
-    {
-        if (!_permenant)
-            return;
+        public bool IsBusy { get; private set; }
 
-        HidePopup();
-    }
+        public bool IsMoving { get; private set; }
+        
 
+        private Vector2 _initPos;
+        
+        bool _allowHide = true;
 
-    public void ShowPopup(bool withAnim = true)
-    {
-        if (_overSbilingIndex == null)
-            transform.SetAsLastSibling();
-        else
-            transform.SetSiblingIndex(_overSbilingIndex.GetSiblingIndex() - 1);
+        Rect _backCloseRect;
 
-        if (_backgImage.enabled == false)
-            _backgImage.enabled = true;
-
-        if (IsBusy)
+        void Awake()
         {
-            if (_logBusy)
-                Debug.LogWarning(gameObject.name + " PopupScreen is busy.");
-            return;
-        }       
-
-        _hide = false;
-        _frameRectTr.gameObject.SetActive(true);
-        StartCoroutine(Show(withAnim));
-    }
-
-    public void HidePopup()
-    {
-        _hide = true;
-    }
-
-
-    IEnumerator Show(bool anim)
-    {
-        IsBusy = true;
-
-        float animTime = _animMoveTime;        
-
-        _backgImage.raycastTarget = true;
-
-        ShowEvent?.Invoke();
-
-        //show
-        if (anim)
-        {
-            _frameRectTr.anchoredPosition = _framehidePos;
-            _frameRectTr.DOAnchorPos(_initPos, animTime);
-            _backgImage.DOFade(0, 0);
-            _backgImage.DOFade(_transparency, animTime).onComplete = () => { ShowedEvent?.Invoke(); };
-        }
-        else
-        {
-            var col = _backgImage.color;
-            _backgImage.color = new Color(col.r, col.g, col.b, _transparency);
-            _frameRectTr.anchoredPosition = _initPos;
+            _initPos = _frameRectTr.anchoredPosition;
+            _backCloseRect = _backCloseImage.rectTransform.rect;
         }
 
-        //SoundManager.Instance.PlaySound(SoundNames.PopupShow);
-
-
-        if (_permenant)
-            yield return new WaitUntil(() => _hide);
-        else
-            yield return new WaitForSeconds(_animShowTime + animTime);
-
-
-        //hide
-        if (anim)
+        void Start()
         {
-            _frameRectTr.DOAnchorPos(_framehidePos, animTime);
-            _backgImage.DOFade(0, animTime);
+            _closeButton.onClick.AddListener(() => Hide());
+            _backCloseImage.gameObject.GetComponent<Button>().onClick.AddListener(() => Hide());
         }
-        else
+        
+        void OnEnable()
         {
-            var col = _backgImage.color;
-            _backgImage.color = new Color(col.r, col.g, col.b, 0);
-            _frameRectTr.anchoredPosition = _framehidePos;
+            var tr = transform;
+            if (_setSibling)
+                tr.SetSiblingIndex(tr.parent.childCount - 2);
         }
 
-        //SoundManager.Instance.PlaySound(SoundNames.PopupHide);
 
-        yield return new WaitForSeconds(animTime);
+        public void Show()
+        {
+            if (IsBusy)
+                return;
 
-        _frameRectTr.gameObject.SetActive(false);
+            gameObject.SetActive(true);
+            StartCoroutine(ShowCoroutine());
+        }
 
-        _backgImage.raycastTarget = false;
+        IEnumerator ShowCoroutine()
+        {
+            IsMoving = true;
 
-        ShowFinishedEvent?.Invoke();
+            IsBusy = true;
+            
+            BeforeShowEvent?.Invoke();
 
-        IsBusy = false;
+            s_popupsList.Add(this);
+
+            _backCloseImage.raycastTarget = true;
+
+            if (_animAudio != null)
+                _animAudio.Play();
+            
+            if (_animType == PopupAnimTypes.Move)
+            {
+                Vector2 pos = _initPos;
+
+                if (!_moveHor)
+                    pos.y += _moveDir * _backCloseRect.height;
+                else
+                    pos.x += _moveDir * _backCloseRect.width;
+
+                _frameRectTr.anchoredPosition = pos;
+                _frameRectTr.DOAnchorPos(_initPos, _animTime).SetEase(Ease.OutBack);
+            }
+            if (_animType == PopupAnimTypes.Scale)
+            {
+                _frameRectTr.localScale = Vector3.one * .1f;
+                _frameRectTr.DOScale(Vector3.one, _animTime).SetEase(Ease.OutBack);
+            }
+
+            var col = _backCloseImage.color;
+            col.a = 0;
+            _backCloseImage.color = col;
+            _backCloseImage.DOFade(.75f, _animTime).SetEase(Ease.Linear);
+
+            yield return new WaitForSeconds(_animTime);
+
+            ShowEvent?.Invoke();
+
+            IsMoving = false;
+        }
+
+        public void Hide(bool fast = false)
+        {
+            if(!_allowHide)
+                return;
+            
+            if (IsMoving)
+                return;
+
+            StartCoroutine(HideCoroutine(fast));
+        }
+
+        IEnumerator HideCoroutine(bool fast)
+        {
+            IsMoving = true;
+
+            _backCloseImage.raycastTarget = false;
+
+            if (_animType == PopupAnimTypes.Move)
+            {
+                Vector2 pos = _initPos;
+
+                if (!_moveHor)
+                    pos.y += _moveDir * _backCloseRect.height;
+                else
+                    pos.x += _moveDir * _backCloseRect.height;
+
+                if (!fast)
+                    _frameRectTr.DOAnchorPos(pos, _animTime).SetEase(Ease.InBack);
+                else
+                    _frameRectTr.anchoredPosition = pos;
+            }
+
+            if (_animType == PopupAnimTypes.Scale)
+            {
+                _frameRectTr.localScale = Vector3.one;
+                _frameRectTr.DOScale(Vector3.one * .1f, _animTime).SetEase(Ease.InBack);
+            }
+
+            _backCloseImage.DOFade(0, !fast ? _animTime : 0).SetEase(Ease.Linear);
+
+            yield return new WaitForSeconds(_animTime);
+
+            IsBusy = false;
+
+            s_popupsList.Remove(this);
+
+            IsMoving = false;
+            
+            gameObject.SetActive(_avtiveWhenHidden);
+            
+            HideEvent?.Invoke();
+        }
+
+        void Update()
+        {
+            if (_allowHideWithEsc && Input.GetKeyUp(KeyCode.Escape))
+            {
+                var popup = s_popupsList.LastOrDefault();
+                if (popup != null && !popup.IsMoving && !ConfirmScreen.AnyPopupOnTop())
+                {
+                    popup.Hide();
+                }
+            }
+        }
+
+        void OnDestroy()
+        {
+            if (s_popupsList.Contains(this))
+                s_popupsList.Remove(this);
+        }
+
+        public void AllowHide(bool allow)
+        {
+            _allowHide = allow;
+        }
+
+        public static bool AnyPopupOnTop()
+        {
+            return s_popupsList.Count > 0;
+        }
     }
-
 }

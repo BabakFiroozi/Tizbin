@@ -82,7 +82,7 @@
      <Compile Include="Assets\Scripts\GameModes.cs" />
      <Compile Include="Assets\Scripts\GameSaveData.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
-     <Compile Include="Assets\Scripts\MathBoard.cs" />
+     <Compile Include="Assets\Scripts\MemSightBoard.cs" />
      <Compile Include="Assets\Scripts\MemoryBoard.cs" />
      <Compile Include="Assets\Scripts\MyAnalytics.cs" />
      <Compile Include="Assets\Scripts\ParticleOverFix.cs" />

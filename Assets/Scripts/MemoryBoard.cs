@@ -19,7 +19,6 @@ public class MemoryBoard : MonoBehaviour
 
     [SerializeField] Button _hintButton = null;
     [SerializeField] Button _helpButton = null;
-    [SerializeField] Button _backButton = null;
     [SerializeField] Button _replyButton = null;
 
 
@@ -158,10 +157,6 @@ public class MemoryBoard : MonoBehaviour
         _helpButton.onClick.AddListener(() =>
         {
             StartCoroutine(ShowHelpPics());
-        });
-        _backButton.onClick.AddListener(() =>
-        {
-            SceneTransitor.Instance.TransitScene(SceneTransitor.SCENE_MAIN_MENU);
         });
         _replyButton.onClick.AddListener(() =>
         {

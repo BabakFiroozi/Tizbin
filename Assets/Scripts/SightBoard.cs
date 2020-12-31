@@ -19,7 +19,6 @@ public class SightBoard : MonoBehaviour
 
     [SerializeField] Button _hintButton = null;
     [SerializeField] Button _helpButton = null;
-    [SerializeField] Button _backButton = null;
 
     [SerializeField] Image _timerBar = null;
 
@@ -146,14 +145,6 @@ public class SightBoard : MonoBehaviour
                 _hitDuratin = _hitTimer;
         });
 
-        _backButton.onClick.AddListener(() =>
-        {
-            _perventTouch.SetActive(true);
-            _hitTimer = 0;
-            SceneTransitor.Instance.TransitScene(SceneTransitor.SCENE_MAIN_MENU);
-        });
-        
-        
         Server.Instance.Init();
         Server.Instance.SetAllPictureIds();
 

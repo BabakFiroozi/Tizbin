@@ -6,9 +6,9 @@ using System.Linq;
 using DG.Tweening;
 
 
-public class MathBoard : MonoBehaviour
+public class MemSightBoard : MonoBehaviour
 {
-    public static MathBoard Instance { get; private set; } = null;
+    public static MemSightBoard Instance { get; private set; } = null;
 
     [SerializeField] Button _nextButton = null;
     [SerializeField] Button _backButton = null;
